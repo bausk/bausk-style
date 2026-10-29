@@ -1,0 +1,43 @@
+# bausk-style 0.1.0 · look kharkiv · dark · screen · generated, do not edit.
+# plt.style.use("<path>/kharkiv-dark-screen.mplstyle")  or  bausk_style.use("kharkiv", "dark", "screen")
+# Fonts: matplotlib needs the TTF/OTF files installed (see guide/media/figures.md); otherwise DejaVu is used.
+font.family: sans-serif
+font.sans-serif: Fixel, DejaVu Sans
+font.monospace: IBM Plex Mono, DejaVu Sans Mono
+font.size: 11
+axes.titlesize: 13
+axes.titleweight: bold
+axes.titlelocation: left
+axes.labelsize: 11
+xtick.labelsize: 10
+ytick.labelsize: 10
+legend.fontsize: 10
+legend.frameon: False
+text.color: f1f0ee
+axes.labelcolor: bfbebb
+axes.edgecolor: 999895
+axes.facecolor: 100f0e
+figure.facecolor: 100f0e
+savefig.facecolor: 100f0e
+axes.prop_cycle: cycler('color', ['f1f0ee', 'ed4b40', '7d7a77', '67a3e0', 'f0ba59', '7aa671'])
+axes.spines.top: False
+axes.spines.right: False
+axes.linewidth: 0.96
+axes.grid: True
+axes.grid.axis: y
+axes.axisbelow: True
+grid.color: 373534
+grid.linewidth: 0.6
+xtick.color: 999895
+ytick.color: 999895
+xtick.labelcolor: 999895
+ytick.labelcolor: 999895
+lines.linewidth: 1.6
+lines.solid_capstyle: butt
+patch.edgecolor: 100f0e
+image.cmap: cividis
+figure.dpi: 150
+savefig.dpi: 300
+savefig.bbox: tight
+svg.fonttype: none
+pdf.fonttype: 42

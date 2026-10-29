@@ -1,0 +1,82 @@
+# bausk-style · look "folio" · light · generated, do not edit.
+# Copied into a Quarto project as _brand.yml by `bausk-style init --media slides`, with fonts/ next to it.
+meta:
+  name:
+    full: "Oleksandr Bausk"
+    short: "Bausk"
+  link:
+    home: https://bausk.dev
+color:
+  palette:
+    fg: "#1c1b19"
+    fg-muted: "#46433d"
+    fg-subtle: "#6a665e"
+    bg: "#faf9f6"
+    bg-subtle: "#f1efe9"
+    line: "#d9d5cc"
+    accent: "#8f2a1a"
+    viz-1: "#1c1b19"
+    viz-2: "#8f2a1a"
+    viz-3: "#1d5a57"
+    viz-4: "#9a6a12"
+    viz-5: "#1f4a78"
+    viz-6: "#5b6b2e"
+  foreground: fg
+  background: bg
+  primary: accent
+  secondary: fg-muted
+  tertiary: line
+  success: "#5b6b2e"
+  info: viz-1
+  warning: "#9a6a12"
+  danger: "#8f2a1a"
+  light: bg
+  dark: fg
+typography:
+  fonts:
+    - source: file
+      family: "BS Source Serif 4"
+      files:
+        - path: fonts/source-serif-4/source-serif-4-cyrillic-opsz-normal.woff2
+          weight: "200 900"
+          style: normal
+        - path: fonts/source-serif-4/source-serif-4-latin-opsz-normal.woff2
+          weight: "200 900"
+          style: normal
+        - path: fonts/source-serif-4/source-serif-4-cyrillic-opsz-italic.woff2
+          weight: "200 900"
+          style: italic
+        - path: fonts/source-serif-4/source-serif-4-latin-opsz-italic.woff2
+          weight: "200 900"
+          style: italic
+    - source: file
+      family: "BS Source Sans 3"
+      files:
+        - path: fonts/source-sans-3/source-sans-3-cyrillic-wght-normal.woff2
+          weight: "200 900"
+          style: normal
+        - path: fonts/source-sans-3/source-sans-3-latin-wght-normal.woff2
+          weight: "200 900"
+          style: normal
+    - source: file
+      family: "BS Source Code Pro"
+      files:
+        - path: fonts/source-code-pro/source-code-pro-cyrillic-wght-normal.woff2
+          weight: "200 900"
+          style: normal
+        - path: fonts/source-code-pro/source-code-pro-latin-wght-normal.woff2
+          weight: "200 900"
+          style: normal
+  base:
+    family: "BS Source Serif 4"
+    line-height: 1.62
+  headings:
+    family: "BS Source Serif 4"
+    weight: 600
+    line-height: 1.2
+  monospace:
+    family: "BS Source Code Pro"
+    size: 0.9em
+  link:
+    color: accent
+    decoration: underline

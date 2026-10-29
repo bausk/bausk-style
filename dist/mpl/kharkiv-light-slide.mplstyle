@@ -1,0 +1,43 @@
+# bausk-style 0.1.0 · look kharkiv · light · slide · generated, do not edit.
+# plt.style.use("<path>/kharkiv-light-slide.mplstyle")  or  bausk_style.use("kharkiv", "light", "slide")
+# Fonts: matplotlib needs the TTF/OTF files installed (see guide/media/figures.md); otherwise DejaVu is used.
+font.family: sans-serif
+font.sans-serif: Fixel, DejaVu Sans
+font.monospace: IBM Plex Mono, DejaVu Sans Mono
+font.size: 20
+axes.titlesize: 26
+axes.titleweight: bold
+axes.titlelocation: left
+axes.labelsize: 20
+xtick.labelsize: 18
+ytick.labelsize: 18
+legend.fontsize: 18
+legend.frameon: False
+text.color: 100f0e
+axes.labelcolor: 3f3d3b
+axes.edgecolor: 5d5a59
+axes.facecolor: f1f0ee
+figure.facecolor: f1f0ee
+savefig.facecolor: f1f0ee
+axes.prop_cycle: cycler('color', ['100f0e', 'c91114', '7d7a77', '23588a', 'ac7d1b', '4a6e42'])
+axes.spines.top: False
+axes.spines.right: False
+axes.linewidth: 1.80
+axes.grid: True
+axes.grid.axis: y
+axes.axisbelow: True
+grid.color: bfbebb
+grid.linewidth: 1
+xtick.color: 5d5a59
+ytick.color: 5d5a59
+xtick.labelcolor: 5d5a59
+ytick.labelcolor: 5d5a59
+lines.linewidth: 3
+lines.solid_capstyle: butt
+patch.edgecolor: f1f0ee
+image.cmap: cividis
+figure.dpi: 150
+savefig.dpi: 300
+savefig.bbox: tight
+svg.fonttype: none
+pdf.fonttype: 42

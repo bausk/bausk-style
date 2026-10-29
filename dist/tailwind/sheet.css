@@ -1,0 +1,85 @@
+/* bausk-style 0.1.0 · Tailwind v4 theme · look "sheet" · generated, do not edit. */
+@theme inline {
+  --color-*: initial;
+  --color-transparent: transparent;
+  --color-current: currentColor;
+  --color-bg: var(--bs-bg);
+  --color-bg-subtle: var(--bs-bg-subtle);
+  --color-bg-inverse: var(--bs-bg-inverse);
+  --color-fg: var(--bs-fg);
+  --color-fg-muted: var(--bs-fg-muted);
+  --color-fg-subtle: var(--bs-fg-subtle);
+  --color-fg-inverse: var(--bs-fg-inverse);
+  --color-line: var(--bs-line);
+  --color-line-strong: var(--bs-line-strong);
+  --color-accent: var(--bs-accent);
+  --color-accent-strong: var(--bs-accent-strong);
+  --color-accent-subtle: var(--bs-accent-subtle);
+  --color-on-accent: var(--bs-on-accent);
+  --color-focus: var(--bs-focus);
+  --color-selection: var(--bs-selection);
+  --color-positive: var(--bs-positive);
+  --color-negative: var(--bs-negative);
+  --color-caution: var(--bs-caution);
+  --color-viz-1: var(--bs-viz-1);
+  --color-viz-2: var(--bs-viz-2);
+  --color-viz-3: var(--bs-viz-3);
+  --color-viz-4: var(--bs-viz-4);
+  --color-viz-5: var(--bs-viz-5);
+  --color-viz-6: var(--bs-viz-6);
+  --color-viz-up: var(--bs-viz-up);
+  --color-viz-down: var(--bs-viz-down);
+  --color-viz-muted: var(--bs-viz-muted);
+  --color-viz-grid: var(--bs-viz-grid);
+  --color-viz-axis: var(--bs-viz-axis);
+  --color-viz-label: var(--bs-viz-label);
+
+  --font-*: initial;
+  --font-text: var(--bs-font-text);
+  --font-ui: var(--bs-font-ui);
+  --font-display: var(--bs-font-display);
+  --font-mono: var(--bs-font-mono);
+
+  --text-*: initial;
+  --text-2xs: var(--bs-size-2xs);
+  --text-xs: var(--bs-size-xs);
+  --text-sm: var(--bs-size-sm);
+  --text-md: var(--bs-size-md);
+  --text-text: var(--bs-size-text);
+  --text-lg: var(--bs-size-lg);
+  --text-xl: var(--bs-size-xl);
+  --text-2xl: var(--bs-size-2xl);
+  --text-3xl: var(--bs-size-3xl);
+  --text-4xl: var(--bs-size-4xl);
+
+  --radius-*: initial;
+  --radius-none: 0;
+  --radius-surface: var(--bs-radius);
+  --radius-control: var(--bs-radius-control);
+
+  --shadow-*: initial;
+  --inset-shadow-*: initial;
+  --drop-shadow-*: initial;
+  --text-shadow-*: initial;
+  --blur-*: initial;
+  --animate-*: initial;
+  --animate-spin: spin 1s linear infinite;
+
+  --ease-*: initial;
+  --ease-out: var(--bs-ease-out);
+  --ease-in-out: var(--bs-ease-in-out);
+
+  --container-text: var(--bs-measure-text);
+  --container-wide: var(--bs-measure-wide);
+  --container-page: var(--bs-measure-page);
+
+  --leading-text: var(--bs-leading-text);
+  --leading-ui: var(--bs-leading-ui);
+  --leading-tight: var(--bs-leading-tight);
+}
+
+/* Line widths as utilities: border-hair = thin line, border-main = main line. */
+@utility border-hair { border-width: var(--bs-line-w); }
+@utility border-main { border-width: var(--bs-line-w-strong); }
+@utility label { font-family: var(--bs-font-ui); font-size: var(--bs-size-xs); font-weight: var(--bs-label-weight); font-stretch: var(--bs-label-stretch); text-transform: var(--bs-label-case); letter-spacing: var(--bs-tracking-label); color: var(--bs-fg-subtle); }
+@utility num { font-variant-numeric: tabular-nums lining-nums; }

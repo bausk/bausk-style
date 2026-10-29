@@ -1,0 +1,39 @@
+/* survey · signature
+   A map neatline (thin line, gap, thick line) frames sections, slides and video.
+   The metadata block is the sheet's margin legend. Magenta always marks the active
+   route: the current nav item, the selected row, the highlighted series. */
+@layer bs.signature {
+  /* Neatline: thin line, 4px gap, main line. */
+  .bs-section-head { position: relative; margin-top: calc(var(--bs-space-8) + 5px); }
+  .bs-section-head::before { content: ""; position: absolute; left: 0; right: 0; top: calc(-1 * (var(--bs-line-w-strong) + 4px + var(--bs-line-w))); border-top: var(--bs-line-w) solid var(--bs-fg); }
+  .bs-section-head__title { font-weight: var(--bs-label-weight); text-transform: var(--bs-label-case); letter-spacing: var(--bs-tracking-label); font-size: var(--bs-size-sm); }
+
+  .bs-meta {
+    grid-template-columns: max-content 1fr; padding: var(--bs-space-4) var(--bs-space-5);
+    outline: var(--bs-line-w) solid var(--bs-fg); outline-offset: 3px;
+    border: var(--bs-line-w-strong) solid var(--bs-fg); max-width: var(--bs-measure-text);
+    background: var(--bs-bg);
+  }
+  .bs-meta dt { font-size: var(--bs-size-2xs); }
+
+  .bs-mark { background: var(--bs-accent-subtle); border-bottom: 2px solid var(--bs-accent); padding: 0 0.05em; }
+
+  .bs-prose h2, .bs-prose h3 { font-style: normal; }
+  .bs-figure figcaption { font-family: var(--bs-font-text); font-style: italic; font-size: var(--bs-size-sm); }
+  .bs-figure__num { font-style: normal; font-family: var(--bs-font-ui); text-transform: var(--bs-label-case); letter-spacing: var(--bs-tracking-label); font-size: var(--bs-size-xs); }
+
+  .bs-panel__head { background: var(--bs-bg-subtle); }
+  .bs-panel__title { text-transform: var(--bs-label-case); letter-spacing: var(--bs-tracking-label); font-size: var(--bs-size-xs); font-weight: var(--bs-label-weight); }
+
+  .bs-slide__frame {
+    inset: calc(48 * var(--px)) calc(48 * var(--px)) calc(96 * var(--px));
+    border: calc(4 * var(--px)) solid currentColor;
+    outline: calc(1.5 * var(--px)) solid currentColor; outline-offset: calc(10 * var(--px));
+    padding: calc(var(--bs-slide-margin) * 0.7 * var(--px));
+  }
+  .bs-slide__foot { position: absolute; left: 0; right: 0; bottom: calc(-80 * var(--px)); padding: 0 calc(4 * var(--px)); text-transform: var(--bs-label-case); letter-spacing: var(--bs-tracking-label); }
+  .bs-slide__title { font-weight: var(--bs-weight-display); }
+
+  .bs-video .bs-titlecard { inset: calc(1920 * var(--bs-video-action-safe) * var(--px)); border: calc(4 * var(--px)) solid currentColor; outline: calc(1.5 * var(--px)) solid currentColor; outline-offset: calc(10 * var(--px)); }
+  .bs-lowerthird { border-left: calc(8 * var(--px)) solid var(--bs-accent); }
+}

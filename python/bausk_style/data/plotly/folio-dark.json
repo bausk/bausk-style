@@ -1,0 +1,107 @@
+{
+  "layout": {
+    "font": {
+      "family": "\"BS Source Sans 3\", \"Source Sans 3\", \"Segoe UI\", system-ui, sans-serif",
+      "color": "#ece9e2",
+      "size": 12
+    },
+    "title": {
+      "font": {
+        "family": "\"BS Source Serif 4\", \"Source Serif 4\", Georgia, serif",
+        "size": 16,
+        "color": "#ece9e2"
+      },
+      "x": 0,
+      "xanchor": "left"
+    },
+    "paper_bgcolor": "#1a1917",
+    "plot_bgcolor": "#1a1917",
+    "colorway": [
+      "#ece9e2",
+      "#e0846f",
+      "#6fb5ae",
+      "#d9a548",
+      "#7fa6d6",
+      "#a5b86a"
+    ],
+    "xaxis": {
+      "gridcolor": "#3a3833",
+      "linecolor": "#9c968a",
+      "zerolinecolor": "#9c968a",
+      "tickcolor": "#9c968a",
+      "showline": true,
+      "ticks": "outside",
+      "ticklen": 4,
+      "tickfont": {
+        "color": "#9c968a"
+      },
+      "title": {
+        "font": {
+          "color": "#c4bfb4"
+        }
+      }
+    },
+    "yaxis": {
+      "gridcolor": "#3a3833",
+      "linecolor": "#9c968a",
+      "zerolinecolor": "#9c968a",
+      "tickcolor": "#9c968a",
+      "showline": true,
+      "ticks": "outside",
+      "ticklen": 4,
+      "tickfont": {
+        "color": "#9c968a"
+      },
+      "title": {
+        "font": {
+          "color": "#c4bfb4"
+        }
+      }
+    },
+    "legend": {
+      "font": {
+        "color": "#c4bfb4"
+      },
+      "bgcolor": "rgba(0,0,0,0)"
+    },
+    "hoverlabel": {
+      "bgcolor": "#ece9e2",
+      "font": {
+        "color": "#1a1917",
+        "family": "\"BS Source Sans 3\", \"Source Sans 3\", \"Segoe UI\", system-ui, sans-serif"
+      },
+      "bordercolor": "#ece9e2"
+    },
+    "margin": {
+      "l": 56,
+      "r": 24,
+      "t": 48,
+      "b": 48
+    }
+  },
+  "data": {
+    "candlestick": [
+      {
+        "increasing": {
+          "line": {
+            "color": "#6fb5ae"
+          },
+          "fillcolor": "#6fb5ae"
+        },
+        "decreasing": {
+          "line": {
+            "color": "#e0846f"
+          },
+          "fillcolor": "#e0846f"
+        }
+      }
+    ],
+    "scatter": [
+      {
+        "line": {
+          "width": 1.75
+        }
+      }
+    ]
+  }
+}

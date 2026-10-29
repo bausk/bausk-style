@@ -1,0 +1,106 @@
+# bausk-style · look "survey" · dark · generated, do not edit.
+# Copied into a Quarto project as _brand.yml by `bausk-style init --media slides`, with fonts/ next to it.
+meta:
+  name:
+    full: "Oleksandr Bausk"
+    short: "Bausk"
+  link:
+    home: https://bausk.dev
+color:
+  palette:
+    fg: "#e4edf0"
+    fg-muted: "#b4c0c5"
+    fg-subtle: "#92a1a9"
+    bg: "#0c1721"
+    bg-subtle: "#15232f"
+    line: "#2b3a47"
+    accent: "#ed74bd"
+    viz-1: "#60d8eb"
+    viz-2: "#6ed889"
+    viz-3: "#f7bc50"
+    viz-4: "#ed74bd"
+    viz-5: "#c4936b"
+    viz-6: "#e4edf0"
+  foreground: fg
+  background: bg
+  primary: accent
+  secondary: fg-muted
+  tertiary: line
+  success: "#6ed889"
+  info: viz-1
+  warning: "#f7bc50"
+  danger: "#f66d62"
+  light: bg
+  dark: fg
+typography:
+  fonts:
+    - source: file
+      family: "BS Literata"
+      files:
+        - path: fonts/literata/literata-cyrillic-opsz-normal.woff2
+          weight: "200 900"
+          style: normal
+        - path: fonts/literata/literata-latin-opsz-normal.woff2
+          weight: "200 900"
+          style: normal
+        - path: fonts/literata/literata-cyrillic-opsz-italic.woff2
+          weight: "200 900"
+          style: italic
+        - path: fonts/literata/literata-latin-opsz-italic.woff2
+          weight: "200 900"
+          style: italic
+    - source: file
+      family: "BS Sofia Sans Semi Condensed"
+      files:
+        - path: fonts/sofia-sans-semi-condensed/sofia-sans-semi-condensed-cyrillic-wght-normal.woff2
+          weight: "1 1000"
+          style: normal
+        - path: fonts/sofia-sans-semi-condensed/sofia-sans-semi-condensed-latin-wght-normal.woff2
+          weight: "1 1000"
+          style: normal
+        - path: fonts/sofia-sans-semi-condensed/sofia-sans-semi-condensed-cyrillic-wght-italic.woff2
+          weight: "1 1000"
+          style: italic
+        - path: fonts/sofia-sans-semi-condensed/sofia-sans-semi-condensed-latin-wght-italic.woff2
+          weight: "1 1000"
+          style: italic
+    - source: file
+      family: "BS IBM Plex Mono"
+      files:
+        - path: fonts/plex-mono/ibm-plex-mono-cyrillic-400-normal.woff2
+          weight: "400"
+          style: normal
+        - path: fonts/plex-mono/ibm-plex-mono-latin-400-normal.woff2
+          weight: "400"
+          style: normal
+        - path: fonts/plex-mono/ibm-plex-mono-cyrillic-500-normal.woff2
+          weight: "500"
+          style: normal
+        - path: fonts/plex-mono/ibm-plex-mono-latin-500-normal.woff2
+          weight: "500"
+          style: normal
+        - path: fonts/plex-mono/ibm-plex-mono-cyrillic-600-normal.woff2
+          weight: "600"
+          style: normal
+        - path: fonts/plex-mono/ibm-plex-mono-latin-600-normal.woff2
+          weight: "600"
+          style: normal
+        - path: fonts/plex-mono/ibm-plex-mono-cyrillic-400-italic.woff2
+          weight: "400"
+          style: italic
+        - path: fonts/plex-mono/ibm-plex-mono-latin-400-italic.woff2
+          weight: "400"
+          style: italic
+  base:
+    family: "BS Literata"
+    line-height: 1.62
+  headings:
+    family: "BS Literata"
+    weight: 600
+    line-height: 1.12
+  monospace:
+    family: "BS IBM Plex Mono"
+    size: 0.9em
+  link:
+    color: accent
+    decoration: underline

@@ -1,0 +1,57 @@
+{
+  "name": "bausk-style",
+  "version": "0.1.0",
+  "description": "Oleksandr Bausk's house style: versioned design tokens, looks, components, an agent guidebook and guardrail checks for web, dashboards, slides, figures, games and video.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Oleksandr Bausk <oleksandr.y.bausk@lpnu.ua> (https://bausk.dev)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bausk/bausk-style.git"
+  },
+  "bin": {
+    "bausk-style": "cli/bausk-style.mjs"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/js/index.d.ts",
+      "default": "./dist/js/index.mjs"
+    },
+    "./css/*": "./dist/css/*",
+    "./tailwind/*": "./dist/tailwind/*",
+    "./fonts/*": "./dist/fonts/*",
+    "./json/*": "./dist/json/*",
+    "./dtcg/*": "./dist/dtcg/*",
+    "./plotly/*": "./dist/plotly/*",
+    "./mpl/*": "./dist/mpl/*",
+    "./quarto/*": "./dist/quarto/*",
+    "./design/*": "./dist/design/*",
+    "./guide/*": "./guide/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "fonts/fonts.json",
+    "cli",
+    "guide",
+    "rules",
+    "tokens",
+    "components",
+    "build",
+    "skill",
+    "VERSIONING.md",
+    "CHANGELOG.md",
+    "README.md",
+    "bausk-style.schema.json"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node build/build.mjs",
+    "test": "node build/test.mjs",
+    "check": "node cli/bausk-style.mjs check",
+    "shots": "node scripts/shoot.mjs",
+    "fonts": "node scripts/fetch-fonts.mjs"
+  }
+}

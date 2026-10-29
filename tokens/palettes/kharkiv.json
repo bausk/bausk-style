@@ -1,0 +1,30 @@
+{
+  "id": "kharkiv",
+  "description": "Black and one red on grey uncoated paper, after 1920s Kharkiv constructivist book and journal design (Vasyl Yermilov, Nova Generatsiia). Used by the `kharkiv` look.",
+  "status": "candidate",
+  "colors": {
+    "paper": "oklch(0.955 0.003 95)",
+    "paper-2": "oklch(0.915 0.004 95)",
+    "paper-3": "oklch(0.80 0.004 90)",
+    "black": "oklch(0.17 0.003 60)",
+    "black-2": "oklch(0.22 0.003 60)",
+    "black-3": "oklch(0.33 0.003 60)",
+    "grey-700": "oklch(0.36 0.004 60)",
+    "grey-600": "oklch(0.47 0.004 60)",
+    "grey-500": "oklch(0.58 0.005 60)",
+    "grey-400": "oklch(0.68 0.004 80)",
+    "red": "oklch(0.53 0.21 28)",
+    "red-deep": "oklch(0.45 0.19 28)",
+    "red-tint": "oklch(0.91 0.04 28)",
+    "red-light": "oklch(0.64 0.20 28)",
+    "red-pale": "oklch(0.72 0.17 30)",
+    "red-night": "oklch(0.28 0.08 28)",
+    "ink-blue": "oklch(0.45 0.10 250)",
+    "ink-blue-light": "oklch(0.70 0.11 250)",
+    "mustard": "oklch(0.62 0.12 80)",
+    "mustard-light": "oklch(0.82 0.13 80)",
+    "olive": "oklch(0.50 0.08 140)",
+    "olive-light": "oklch(0.68 0.09 140)",
+    "mustard-deep": "oklch(0.52 0.11 75)"
+  }
+}

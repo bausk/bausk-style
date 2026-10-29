@@ -1,0 +1,43 @@
+# bausk-style 0.1.0 · look survey · dark · slide · generated, do not edit.
+# plt.style.use("<path>/survey-dark-slide.mplstyle")  or  bausk_style.use("survey", "dark", "slide")
+# Fonts: matplotlib needs the TTF/OTF files installed (see guide/media/figures.md); otherwise DejaVu is used.
+font.family: sans-serif
+font.sans-serif: Sofia Sans Semi Condensed, DejaVu Sans
+font.monospace: IBM Plex Mono, DejaVu Sans Mono
+font.size: 20
+axes.titlesize: 26
+axes.titleweight: bold
+axes.titlelocation: left
+axes.labelsize: 20
+xtick.labelsize: 18
+ytick.labelsize: 18
+legend.fontsize: 18
+legend.frameon: False
+text.color: e4edf0
+axes.labelcolor: b4c0c5
+axes.edgecolor: 92a1a9
+axes.facecolor: 0c1721
+figure.facecolor: 0c1721
+savefig.facecolor: 0c1721
+axes.prop_cycle: cycler('color', ['60d8eb', '6ed889', 'f7bc50', 'ed74bd', 'c4936b', 'e4edf0'])
+axes.spines.top: False
+axes.spines.right: False
+axes.linewidth: 1.80
+axes.grid: True
+axes.grid.axis: y
+axes.axisbelow: True
+grid.color: 2b3a47
+grid.linewidth: 1
+xtick.color: 92a1a9
+ytick.color: 92a1a9
+xtick.labelcolor: 92a1a9
+ytick.labelcolor: 92a1a9
+lines.linewidth: 3
+lines.solid_capstyle: butt
+patch.edgecolor: 0c1721
+image.cmap: cividis
+figure.dpi: 150
+savefig.dpi: 300
+savefig.bbox: tight
+svg.fonttype: none
+pdf.fonttype: 42

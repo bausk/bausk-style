@@ -1,0 +1,623 @@
+{
+  "$description": "bausk-style 0.1.0 · look \"kharkiv\" · light scheme. Values that DTCG cannot express (clamp(), %, text-transform) are left out; see dist/json/.",
+  "$extensions": {
+    "dev.bausk.style": {
+      "version": "0.1.0",
+      "look": "kharkiv",
+      "scheme": "light",
+      "status": "candidate"
+    }
+  },
+  "color": {
+    "$type": "color",
+    "bg": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9451,
+          0.9412,
+          0.9333
+        ],
+        "hex": "#f1f0ee"
+      },
+      "$description": "Page or surface background."
+    },
+    "bg-subtle": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.8941,
+          0.8902,
+          0.8784
+        ],
+        "hex": "#e4e3e0"
+      },
+      "$description": "Wells: code blocks, table heads, hovered rows, inset areas."
+    },
+    "bg-inverse": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0627,
+          0.0588,
+          0.0549
+        ],
+        "hex": "#100f0e"
+      },
+      "$description": "Inverted band: title slides, tooltips, one emphasised block per view."
+    },
+    "fg": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0627,
+          0.0588,
+          0.0549
+        ],
+        "hex": "#100f0e"
+      },
+      "$description": "Primary text, headings, primary rules."
+    },
+    "fg-muted": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2471,
+          0.2392,
+          0.2314
+        ],
+        "hex": "#3f3d3b"
+      },
+      "$description": "Secondary text: standfirsts, excerpts, descriptions."
+    },
+    "fg-subtle": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.3647,
+          0.3529,
+          0.349
+        ],
+        "hex": "#5d5a59"
+      },
+      "$description": "Tertiary text: dates, labels, captions, axis labels. Still >= 4.5:1."
+    },
+    "fg-inverse": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9451,
+          0.9412,
+          0.9333
+        ],
+        "hex": "#f1f0ee"
+      },
+      "$description": "Text on bg-inverse."
+    },
+    "line": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.749,
+          0.7451,
+          0.7333
+        ],
+        "hex": "#bfbebb"
+      },
+      "$description": "Hairline separators. Decorative, may be low contrast."
+    },
+    "line-strong": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0627,
+          0.0588,
+          0.0549
+        ],
+        "hex": "#100f0e"
+      },
+      "$description": "Lines that carry meaning: control borders, chart frames, heavy section rules. >= 3:1."
+    },
+    "accent": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.7882,
+          0.0667,
+          0.0784
+        ],
+        "hex": "#c91114"
+      },
+      "$description": "The single accent: links, current item, focus, the one primary action."
+    },
+    "accent-strong": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.6392,
+          0,
+          0.0314
+        ],
+        "hex": "#a30008"
+      },
+      "$description": "Accent on hover or press."
+    },
+    "accent-subtle": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9843,
+          0.8471,
+          0.8275
+        ],
+        "hex": "#fbd8d3"
+      },
+      "$description": "Accent-tinted background: selection, highlighted row."
+    },
+    "on-accent": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9451,
+          0.9412,
+          0.9333
+        ],
+        "hex": "#f1f0ee"
+      },
+      "$description": "Text on an accent fill."
+    },
+    "focus": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.7882,
+          0.0667,
+          0.0784
+        ],
+        "hex": "#c91114"
+      },
+      "$description": "Focus ring."
+    },
+    "selection": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9843,
+          0.8471,
+          0.8275
+        ],
+        "hex": "#fbd8d3"
+      },
+      "$description": "Text selection background."
+    },
+    "positive": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2902,
+          0.4314,
+          0.2588
+        ],
+        "hex": "#4a6e42"
+      },
+      "$description": "Success or gain in UI state (not chart series)."
+    },
+    "negative": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.7882,
+          0.0667,
+          0.0784
+        ],
+        "hex": "#c91114"
+      },
+      "$description": "Error or loss in UI state."
+    },
+    "caution": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.5529,
+          0.3686,
+          0
+        ],
+        "hex": "#8d5e00"
+      },
+      "$description": "Warning or stale state."
+    },
+    "viz-1": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0627,
+          0.0588,
+          0.0549
+        ],
+        "hex": "#100f0e"
+      },
+      "$description": "Categorical series 1. Series 1-4 are >= 3:1 on bg and stay apart under protan/deutan simulation."
+    },
+    "viz-2": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.7882,
+          0.0667,
+          0.0784
+        ],
+        "hex": "#c91114"
+      },
+      "$description": "Categorical series 2."
+    },
+    "viz-3": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.4902,
+          0.4784,
+          0.4667
+        ],
+        "hex": "#7d7a77"
+      },
+      "$description": "Categorical series 3."
+    },
+    "viz-4": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1373,
+          0.3451,
+          0.5412
+        ],
+        "hex": "#23588a"
+      },
+      "$description": "Categorical series 4."
+    },
+    "viz-5": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.6745,
+          0.4902,
+          0.1059
+        ],
+        "hex": "#ac7d1b"
+      },
+      "$description": "Categorical series 5. Label directly; may be lower contrast."
+    },
+    "viz-6": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2902,
+          0.4314,
+          0.2588
+        ],
+        "hex": "#4a6e42"
+      },
+      "$description": "Categorical series 6. Label directly; may be lower contrast."
+    },
+    "viz-up": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.0627,
+          0.0588,
+          0.0549
+        ],
+        "hex": "#100f0e"
+      },
+      "$description": "Rising value / bullish candle. Pair with a shape or sign, never colour alone."
+    },
+    "viz-down": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.7882,
+          0.0667,
+          0.0784
+        ],
+        "hex": "#c91114"
+      },
+      "$description": "Falling value / bearish candle."
+    },
+    "viz-muted": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.6,
+          0.5961,
+          0.5843
+        ],
+        "hex": "#999895"
+      },
+      "$description": "Context series: benchmark, previous period, unselected."
+    },
+    "viz-grid": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.749,
+          0.7451,
+          0.7333
+        ],
+        "hex": "#bfbebb"
+      },
+      "$description": "Chart gridlines."
+    },
+    "viz-axis": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.3647,
+          0.3529,
+          0.349
+        ],
+        "hex": "#5d5a59"
+      },
+      "$description": "Chart axes and tick marks."
+    },
+    "viz-label": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.3647,
+          0.3529,
+          0.349
+        ],
+        "hex": "#5d5a59"
+      },
+      "$description": "Chart text: tick labels, annotations."
+    }
+  },
+  "font": {
+    "$type": "fontFamily",
+    "text": {
+      "$value": [
+        "Arsenal",
+        "Arsenal",
+        "Segoe UI",
+        "system-ui",
+        "sans-serif"
+      ]
+    },
+    "ui": {
+      "$value": [
+        "Fixel",
+        "Fixel",
+        "Segoe UI",
+        "system-ui",
+        "sans-serif"
+      ]
+    },
+    "display": {
+      "$value": [
+        "Fixel",
+        "Fixel",
+        "Arial Black",
+        "system-ui",
+        "sans-serif"
+      ]
+    },
+    "mono": {
+      "$value": [
+        "IBM Plex Mono",
+        "IBM Plex Mono",
+        "ui-monospace",
+        "Consolas",
+        "monospace"
+      ]
+    }
+  },
+  "size": {
+    "$type": "dimension",
+    "size-2xs": {
+      "$value": {
+        "value": 0.75,
+        "unit": "rem"
+      }
+    },
+    "size-xs": {
+      "$value": {
+        "value": 0.8125,
+        "unit": "rem"
+      }
+    },
+    "size-sm": {
+      "$value": {
+        "value": 0.875,
+        "unit": "rem"
+      }
+    },
+    "size-md": {
+      "$value": {
+        "value": 1,
+        "unit": "rem"
+      }
+    },
+    "size-text": {
+      "$value": {
+        "value": 1.1875,
+        "unit": "rem"
+      }
+    },
+    "size-lg": {
+      "$value": {
+        "value": 1.375,
+        "unit": "rem"
+      }
+    },
+    "size-xl": {
+      "$value": {
+        "value": 1.75,
+        "unit": "rem"
+      }
+    },
+    "size-2xl": {
+      "$value": {
+        "value": 2.5,
+        "unit": "rem"
+      }
+    },
+    "size-3xl": {
+      "$value": {
+        "value": 3.5,
+        "unit": "rem"
+      }
+    },
+    "size-4xl": {
+      "$value": {
+        "value": 5.5,
+        "unit": "rem"
+      }
+    }
+  },
+  "space": {
+    "$type": "dimension",
+    "space-1": {
+      "$value": {
+        "value": 0.125,
+        "unit": "rem"
+      }
+    },
+    "space-2": {
+      "$value": {
+        "value": 0.25,
+        "unit": "rem"
+      }
+    },
+    "space-3": {
+      "$value": {
+        "value": 0.5,
+        "unit": "rem"
+      }
+    },
+    "space-4": {
+      "$value": {
+        "value": 0.75,
+        "unit": "rem"
+      }
+    },
+    "space-5": {
+      "$value": {
+        "value": 1,
+        "unit": "rem"
+      }
+    },
+    "space-6": {
+      "$value": {
+        "value": 1.5,
+        "unit": "rem"
+      }
+    },
+    "space-7": {
+      "$value": {
+        "value": 2.5,
+        "unit": "rem"
+      }
+    },
+    "space-8": {
+      "$value": {
+        "value": 4.5,
+        "unit": "rem"
+      }
+    }
+  },
+  "weight": {
+    "$type": "fontWeight",
+    "weight-regular": {
+      "$value": 400
+    },
+    "weight-medium": {
+      "$value": 500
+    },
+    "weight-bold": {
+      "$value": 700
+    },
+    "weight-display": {
+      "$value": 900
+    }
+  },
+  "leading": {
+    "$type": "number",
+    "leading-text": {
+      "$value": 1.55
+    },
+    "leading-ui": {
+      "$value": 1.35
+    },
+    "leading-tight": {
+      "$value": 0.98
+    }
+  },
+  "shape": {
+    "$type": "dimension",
+    "radius": {
+      "$value": {
+        "value": 0,
+        "unit": "px"
+      }
+    },
+    "radius-control": {
+      "$value": {
+        "value": 0,
+        "unit": "px"
+      }
+    },
+    "line-w": {
+      "$value": {
+        "value": 1,
+        "unit": "px"
+      }
+    },
+    "line-w-strong": {
+      "$value": {
+        "value": 3,
+        "unit": "px"
+      }
+    }
+  },
+  "duration": {
+    "$type": "duration",
+    "duration-fast": {
+      "$value": {
+        "value": 90,
+        "unit": "ms"
+      }
+    },
+    "duration-base": {
+      "$value": {
+        "value": 160,
+        "unit": "ms"
+      }
+    },
+    "duration-slow": {
+      "$value": {
+        "value": 280,
+        "unit": "ms"
+      }
+    }
+  },
+  "easing": {
+    "$type": "cubicBezier",
+    "ease-out": {
+      "$value": [
+        null,
+        0.3,
+        0.9,
+        0.2,
+        1
+      ]
+    },
+    "ease-in-out": {
+      "$value": [
+        null,
+        0.7,
+        0,
+        0.3,
+        1
+      ]
+    }
+  }
+}

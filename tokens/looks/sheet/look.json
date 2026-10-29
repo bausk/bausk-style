@@ -1,0 +1,178 @@
+{
+  "id": "sheet",
+  "name": {
+    "en": "Sheet",
+    "uk": "Аркуш"
+  },
+  "status": "candidate",
+  "since": "0.1.0",
+  "reference": "An engineering drawing sheet from a technical university: drafting film, graphite in two line weights, a ruled title block in the corner, sheets numbered n of N, and corrections in red pencil.",
+  "palette": "graphite",
+  "fonts": {
+    "text": {
+      "font": "plex-sans",
+      "fallback": "\"IBM Plex Sans\", \"Segoe UI\", system-ui, sans-serif"
+    },
+    "ui": {
+      "font": "plex-sans",
+      "fallback": "\"IBM Plex Sans\", \"Segoe UI\", system-ui, sans-serif"
+    },
+    "display": {
+      "font": "plex-sans",
+      "fallback": "\"IBM Plex Sans\", \"Segoe UI\", system-ui, sans-serif"
+    },
+    "mono": {
+      "font": "plex-mono",
+      "fallback": "\"IBM Plex Mono\", ui-monospace, Consolas, monospace"
+    }
+  },
+  "color": {
+    "light": {
+      "bg": "{graphite.film}",
+      "bg-subtle": "{graphite.film-2}",
+      "bg-inverse": "{graphite.graphite-900}",
+      "fg": "{graphite.graphite-900}",
+      "fg-muted": "{graphite.graphite-700}",
+      "fg-subtle": "{graphite.graphite-600}",
+      "fg-inverse": "{graphite.film}",
+      "line": "{graphite.graphite-300}",
+      "line-strong": "{graphite.graphite-600}",
+      "accent": "{graphite.redline}",
+      "accent-strong": "{graphite.redline-deep}",
+      "accent-subtle": "{graphite.redline-tint}",
+      "on-accent": "{graphite.film}",
+      "focus": "{graphite.redline}",
+      "selection": "{graphite.redline-tint}",
+      "positive": "{graphite.pencil-green-deep}",
+      "negative": "{graphite.redline}",
+      "caution": "{graphite.pencil-amber}",
+      "viz-1": "{graphite.graphite-900}",
+      "viz-2": "{graphite.redline}",
+      "viz-3": "{graphite.pencil-blue}",
+      "viz-4": "{graphite.pencil-green}",
+      "viz-5": "{graphite.pencil-ochre}",
+      "viz-6": "{graphite.pencil-slate}",
+      "viz-up": "{graphite.pencil-blue}",
+      "viz-down": "{graphite.redline}",
+      "viz-muted": "{graphite.graphite-400}",
+      "viz-grid": "{graphite.graphite-300}",
+      "viz-axis": "{graphite.graphite-600}",
+      "viz-label": "{graphite.graphite-600}"
+    },
+    "dark": {
+      "bg": "{graphite.graphite-950}",
+      "bg-subtle": "{graphite.graphite-925}",
+      "bg-inverse": "{graphite.graphite-50}",
+      "fg": "{graphite.graphite-50}",
+      "fg-muted": "{graphite.graphite-200}",
+      "fg-subtle": "{graphite.graphite-400}",
+      "fg-inverse": "{graphite.graphite-950}",
+      "line": "{graphite.graphite-850}",
+      "line-strong": "{graphite.graphite-400}",
+      "accent": "{graphite.redline-light}",
+      "accent-strong": "{graphite.redline-pale}",
+      "accent-subtle": "{graphite.redline-night}",
+      "on-accent": "{graphite.graphite-950}",
+      "focus": "{graphite.redline-light}",
+      "selection": "{graphite.redline-night}",
+      "positive": "{graphite.pencil-green-light}",
+      "negative": "{graphite.redline-light}",
+      "caution": "{graphite.pencil-amber-light}",
+      "viz-1": "{graphite.graphite-50}",
+      "viz-2": "{graphite.redline-light}",
+      "viz-3": "{graphite.pencil-blue-light}",
+      "viz-4": "{graphite.pencil-green-light}",
+      "viz-5": "{graphite.pencil-ochre-light}",
+      "viz-6": "{graphite.pencil-slate-dark}",
+      "viz-up": "{graphite.pencil-blue-light}",
+      "viz-down": "{graphite.redline-light}",
+      "viz-muted": "{graphite.graphite-500}",
+      "viz-grid": "{graphite.graphite-850}",
+      "viz-axis": "{graphite.graphite-400}",
+      "viz-label": "{graphite.graphite-400}"
+    }
+  },
+  "size": {
+    "size-2xs": "0.6875rem",
+    "size-xs": "0.75rem",
+    "size-sm": "0.8125rem",
+    "size-md": "0.9375rem",
+    "size-text": "1.0625rem",
+    "size-lg": "1.25rem",
+    "size-xl": "1.5rem",
+    "size-2xl": "2rem",
+    "size-3xl": "2.75rem",
+    "size-4xl": "4rem"
+  },
+  "type": {
+    "leading-text": "1.6",
+    "leading-ui": "1.4",
+    "leading-tight": "1.15",
+    "weight-regular": "400",
+    "weight-medium": "500",
+    "weight-bold": "600",
+    "weight-display": "600",
+    "tracking-display": "-0.01em",
+    "tracking-label": "0.06em",
+    "label-case": "uppercase",
+    "label-stretch": "85%",
+    "label-weight": "500",
+    "display-stretch": "92%",
+    "ui-stretch": "100%"
+  },
+  "space": {
+    "space-1": "0.125rem",
+    "space-2": "0.25rem",
+    "space-3": "0.5rem",
+    "space-4": "0.75rem",
+    "space-5": "1rem",
+    "space-6": "1.5rem",
+    "space-7": "2.5rem",
+    "space-8": "4rem"
+  },
+  "layout": {
+    "measure-text": "40rem",
+    "measure-wide": "62rem",
+    "measure-page": "76rem",
+    "gutter": "clamp(1rem, 4vw, 2.5rem)",
+    "row-h": "2rem",
+    "control-h": "2.25rem"
+  },
+  "shape": {
+    "radius": "0",
+    "radius-control": "0",
+    "line-w": "1px",
+    "line-w-strong": "2px"
+  },
+  "motion": {
+    "duration-fast": "100ms",
+    "duration-base": "180ms",
+    "duration-slow": "320ms",
+    "ease-out": "cubic-bezier(0.2, 0.8, 0.2, 1)",
+    "ease-in-out": "cubic-bezier(0.6, 0, 0.3, 1)"
+  },
+  "media": {
+    "slide": {
+      "width": 1920,
+      "height": 1080,
+      "margin": 112,
+      "title": 88,
+      "lead": 44,
+      "body": 38,
+      "small": 28,
+      "foot": 24
+    },
+    "video": {
+      "actionSafe": 0.035,
+      "titleSafe": 0.05,
+      "minTextRatio": 0.033
+    },
+    "figure": {
+      "fontSize": 8,
+      "titleSize": 9,
+      "lineWidth": 0.8,
+      "singleColumnMm": 85,
+      "doubleColumnMm": 175
+    }
+  }
+}

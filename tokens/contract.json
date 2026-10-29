@@ -1,0 +1,110 @@
+{
+  "$comment": "The public contract. Every look must define every name here. Names may be added in a minor release; removing or renaming one is a major release (see VERSIONING.md). CSS custom property = --bs-<name>.",
+  "color": {
+    "bg": "Page or surface background.",
+    "bg-subtle": "Wells: code blocks, table heads, hovered rows, inset areas.",
+    "bg-inverse": "Inverted band: title slides, tooltips, one emphasised block per view.",
+    "fg": "Primary text, headings, primary rules.",
+    "fg-muted": "Secondary text: standfirsts, excerpts, descriptions.",
+    "fg-subtle": "Tertiary text: dates, labels, captions, axis labels. Still >= 4.5:1.",
+    "fg-inverse": "Text on bg-inverse.",
+    "line": "Hairline separators. Decorative, may be low contrast.",
+    "line-strong": "Lines that carry meaning: control borders, chart frames, heavy section rules. >= 3:1.",
+    "accent": "The single accent: links, current item, focus, the one primary action.",
+    "accent-strong": "Accent on hover or press.",
+    "accent-subtle": "Accent-tinted background: selection, highlighted row.",
+    "on-accent": "Text on an accent fill.",
+    "focus": "Focus ring.",
+    "selection": "Text selection background.",
+    "positive": "Success or gain in UI state (not chart series).",
+    "negative": "Error or loss in UI state.",
+    "caution": "Warning or stale state.",
+    "viz-1": "Categorical series 1. Series 1-4 are >= 3:1 on bg and stay apart under protan/deutan simulation.",
+    "viz-2": "Categorical series 2.",
+    "viz-3": "Categorical series 3.",
+    "viz-4": "Categorical series 4.",
+    "viz-5": "Categorical series 5. Label directly; may be lower contrast.",
+    "viz-6": "Categorical series 6. Label directly; may be lower contrast.",
+    "viz-up": "Rising value / bullish candle. Pair with a shape or sign, never colour alone.",
+    "viz-down": "Falling value / bearish candle.",
+    "viz-muted": "Context series: benchmark, previous period, unselected.",
+    "viz-grid": "Chart gridlines.",
+    "viz-axis": "Chart axes and tick marks.",
+    "viz-label": "Chart text: tick labels, annotations."
+  },
+  "font": {
+    "font-text": "Long reading text.",
+    "font-ui": "Interface: navigation, labels, buttons, metadata, tables.",
+    "font-display": "Titles and large numerals.",
+    "font-mono": "Code, tabular data, measurements. Never as a costume for 'technical'."
+  },
+  "size": {
+    "size-2xs": "Smallest legal label (chart ticks, footnote marks).",
+    "size-xs": "Labels, captions.",
+    "size-sm": "Secondary UI text.",
+    "size-md": "Base UI text.",
+    "size-text": "Reading body text.",
+    "size-lg": "Lead paragraph, h3.",
+    "size-xl": "h2.",
+    "size-2xl": "h1 in articles, slide titles at small scale.",
+    "size-3xl": "Page title.",
+    "size-4xl": "Display: home name, hero numerals."
+  },
+  "type": {
+    "leading-text": "Line height of reading text.",
+    "leading-ui": "Line height of UI text.",
+    "leading-tight": "Line height of titles.",
+    "weight-regular": "Regular weight.",
+    "weight-medium": "Medium weight.",
+    "weight-bold": "Bold weight.",
+    "weight-display": "Weight of display titles.",
+    "tracking-display": "Letter spacing of display titles.",
+    "tracking-label": "Letter spacing of small labels.",
+    "label-case": "text-transform of small labels (none or uppercase).",
+    "label-stretch": "font-stretch of small labels.",
+    "label-weight": "Weight of small labels.",
+    "display-stretch": "font-stretch of display titles.",
+    "ui-stretch": "font-stretch of interface text."
+  },
+  "space": {
+    "space-1": "Hairline gaps.",
+    "space-2": "Tight groups.",
+    "space-3": "Related items.",
+    "space-4": "Default gap.",
+    "space-5": "Between blocks.",
+    "space-6": "Between groups of blocks.",
+    "space-7": "Between sections.",
+    "space-8": "Page-level separation."
+  },
+  "layout": {
+    "measure-text": "Reading column width.",
+    "measure-wide": "Wide figures and lists.",
+    "measure-page": "Page frame.",
+    "gutter": "Page side padding.",
+    "row-h": "Dense row height (tables, watchlists).",
+    "control-h": "Button and input height."
+  },
+  "shape": {
+    "radius": "Corner radius of surfaces.",
+    "radius-control": "Corner radius of buttons and inputs.",
+    "line-w": "Thin line width.",
+    "line-w-strong": "Main line width."
+  },
+  "motion": {
+    "duration-fast": "Hover, press.",
+    "duration-base": "Open, close, small moves.",
+    "duration-slow": "Large moves, chart transitions.",
+    "ease-out": "Default easing for entering and responding.",
+    "ease-in-out": "Easing for moves between two states."
+  },
+  "media": {
+    "slide-margin": "Slide margin in 1920-wide design pixels (unitless).",
+    "slide-title": "Slide title size in design pixels.",
+    "slide-lead": "Slide lead size in design pixels.",
+    "slide-body": "Slide body size in design pixels.",
+    "slide-small": "Slide small text size in design pixels.",
+    "slide-foot": "Slide footer size in design pixels.",
+    "video-action-safe": "Action-safe margin as a fraction of the frame (EBU R95: 0.035).",
+    "video-title-safe": "Title-safe margin as a fraction of the frame (EBU R95: 0.05)."
+  }
+}

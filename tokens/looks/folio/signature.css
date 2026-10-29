@@ -1,0 +1,6 @@
+/* folio · signature (legacy, frozen)
+   The 2026-10 bausk.dev theme: hairlines, a 2px ink rule over section heads,
+   no boxes. Nothing to add beyond the shared components. */
+@layer bs.signature {
+  .bs-entry__title { font-family: var(--bs-font-display); }
+}

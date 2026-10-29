@@ -1,0 +1,21 @@
+{
+  "id": "bausk",
+  "status": "active",
+  "defaultLook": "sheet",
+  "$comment": "defaultLook is a candidate until a look is chosen; the 1.0 release fixes it.",
+  "name":  { "en": "Oleksandr Bausk", "uk": "Олександр Бауск" },
+  "short": { "en": "Bausk", "uk": "Бауск" },
+  "role":  { "en": "Software engineer and lecturer", "uk": "Інженер-програміст і викладач" },
+  "affiliation": {
+    "en": "Department of Software, Lviv Polytechnic National University",
+    "uk": "Кафедра програмного забезпечення, Національний університет «Львівська політехніка»"
+  },
+  "links": {
+    "site": "https://bausk.dev",
+    "orcid": "https://orcid.org/0009-0007-6714-8009",
+    "email": "oleksandr.y.bausk@lpnu.ua"
+  },
+  "languages": ["uk", "en"],
+  "voice": "guide/voice.md",
+  "spelling": "The English name is spelled Oleksandr (as on ORCID). Never Oleksander, Alexander or Aleksandr."
+}

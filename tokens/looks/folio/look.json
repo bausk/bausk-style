@@ -1,0 +1,178 @@
+{
+  "id": "folio",
+  "name": {
+    "en": "Folio (2026 site)",
+    "uk": "Фоліо (сайт 2026)"
+  },
+  "status": "legacy",
+  "since": "0.1.0",
+  "reference": "The bausk.dev Ghost theme v1.0 (2026-10-12): a quiet academic page, serif reading text, sans metadata, hairlines and one brick accent. Kept frozen so that the existing theme can adopt the system without a visual change; not for new work.",
+  "palette": "folio",
+  "fonts": {
+    "text": {
+      "font": "source-serif-4",
+      "fallback": "\"Source Serif 4\", Georgia, \"Times New Roman\", serif"
+    },
+    "ui": {
+      "font": "source-sans-3",
+      "fallback": "\"Source Sans 3\", \"Segoe UI\", system-ui, sans-serif"
+    },
+    "display": {
+      "font": "source-serif-4",
+      "fallback": "\"Source Serif 4\", Georgia, serif"
+    },
+    "mono": {
+      "font": "source-code-pro",
+      "fallback": "ui-monospace, \"SFMono-Regular\", Menlo, Consolas, monospace"
+    }
+  },
+  "color": {
+    "light": {
+      "bg": "{folio.paper}",
+      "bg-subtle": "{folio.paper-2}",
+      "bg-inverse": "{folio.ink}",
+      "fg": "{folio.ink}",
+      "fg-muted": "{folio.ink-2}",
+      "fg-subtle": "{folio.ink-3}",
+      "fg-inverse": "{folio.paper}",
+      "line": "{folio.rule}",
+      "line-strong": "{folio.ink-3}",
+      "accent": "{folio.brick}",
+      "accent-strong": "{folio.brick-ink}",
+      "accent-subtle": "{folio.brick-tint}",
+      "on-accent": "{folio.paper}",
+      "focus": "{folio.brick}",
+      "selection": "{folio.brick-tint}",
+      "positive": "{folio.olive}",
+      "negative": "{folio.brick}",
+      "caution": "{folio.ochre}",
+      "viz-1": "{folio.ink}",
+      "viz-2": "{folio.brick}",
+      "viz-3": "{folio.teal}",
+      "viz-4": "{folio.ochre}",
+      "viz-5": "{folio.ink-blue}",
+      "viz-6": "{folio.olive}",
+      "viz-up": "{folio.teal}",
+      "viz-down": "{folio.brick}",
+      "viz-muted": "{folio.ink-4}",
+      "viz-grid": "{folio.rule}",
+      "viz-axis": "{folio.ink-3}",
+      "viz-label": "{folio.ink-3}"
+    },
+    "dark": {
+      "bg": "{folio.night}",
+      "bg-subtle": "{folio.night-2}",
+      "bg-inverse": "{folio.night-ink}",
+      "fg": "{folio.night-ink}",
+      "fg-muted": "{folio.night-ink-2}",
+      "fg-subtle": "{folio.night-ink-3}",
+      "fg-inverse": "{folio.night}",
+      "line": "{folio.night-rule}",
+      "line-strong": "{folio.night-ink-3}",
+      "accent": "{folio.brick-light}",
+      "accent-strong": "{folio.brick-pale}",
+      "accent-subtle": "{folio.brick-night}",
+      "on-accent": "{folio.night}",
+      "focus": "{folio.brick-light}",
+      "selection": "{folio.brick-night}",
+      "positive": "{folio.olive-light}",
+      "negative": "{folio.brick-light}",
+      "caution": "{folio.ochre-light}",
+      "viz-1": "{folio.night-ink}",
+      "viz-2": "{folio.brick-light}",
+      "viz-3": "{folio.teal-light}",
+      "viz-4": "{folio.ochre-light}",
+      "viz-5": "{folio.ink-blue-light}",
+      "viz-6": "{folio.olive-light}",
+      "viz-up": "{folio.teal-light}",
+      "viz-down": "{folio.brick-light}",
+      "viz-muted": "{folio.night-ink-4}",
+      "viz-grid": "{folio.night-rule}",
+      "viz-axis": "{folio.night-ink-3}",
+      "viz-label": "{folio.night-ink-3}"
+    }
+  },
+  "size": {
+    "size-2xs": "0.75rem",
+    "size-xs": "0.8125rem",
+    "size-sm": "0.875rem",
+    "size-md": "0.9375rem",
+    "size-text": "1.1875rem",
+    "size-lg": "1.375rem",
+    "size-xl": "1.625rem",
+    "size-2xl": "2.125rem",
+    "size-3xl": "2.75rem",
+    "size-4xl": "3.5rem"
+  },
+  "type": {
+    "leading-text": "1.62",
+    "leading-ui": "1.45",
+    "leading-tight": "1.2",
+    "weight-regular": "400",
+    "weight-medium": "600",
+    "weight-bold": "700",
+    "weight-display": "600",
+    "tracking-display": "-0.005em",
+    "tracking-label": "0",
+    "label-case": "none",
+    "label-stretch": "100%",
+    "label-weight": "600",
+    "display-stretch": "100%",
+    "ui-stretch": "100%"
+  },
+  "space": {
+    "space-1": "0.125rem",
+    "space-2": "0.25rem",
+    "space-3": "0.5rem",
+    "space-4": "0.75rem",
+    "space-5": "1rem",
+    "space-6": "1.5rem",
+    "space-7": "2.5rem",
+    "space-8": "4rem"
+  },
+  "layout": {
+    "measure-text": "41rem",
+    "measure-wide": "62rem",
+    "measure-page": "74rem",
+    "gutter": "clamp(1.25rem, 5vw, 3rem)",
+    "row-h": "2rem",
+    "control-h": "2.25rem"
+  },
+  "shape": {
+    "radius": "0",
+    "radius-control": "0",
+    "line-w": "1px",
+    "line-w-strong": "2px"
+  },
+  "motion": {
+    "duration-fast": "120ms",
+    "duration-base": "200ms",
+    "duration-slow": "320ms",
+    "ease-out": "cubic-bezier(0.2, 0.7, 0.2, 1)",
+    "ease-in-out": "cubic-bezier(0.6, 0, 0.3, 1)"
+  },
+  "media": {
+    "slide": {
+      "width": 1920,
+      "height": 1080,
+      "margin": 112,
+      "title": 84,
+      "lead": 44,
+      "body": 40,
+      "small": 28,
+      "foot": 24
+    },
+    "video": {
+      "actionSafe": 0.035,
+      "titleSafe": 0.05,
+      "minTextRatio": 0.033
+    },
+    "figure": {
+      "fontSize": 8,
+      "titleSize": 9,
+      "lineWidth": 0.8,
+      "singleColumnMm": 85,
+      "doubleColumnMm": 175
+    }
+  }
+}

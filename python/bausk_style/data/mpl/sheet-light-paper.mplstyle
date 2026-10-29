@@ -1,0 +1,43 @@
+# bausk-style 0.1.0 · look sheet · light · paper · generated, do not edit.
+# plt.style.use("<path>/sheet-light-paper.mplstyle")  or  bausk_style.use("sheet", "light", "paper")
+# Fonts: matplotlib needs the TTF/OTF files installed (see guide/media/figures.md); otherwise DejaVu is used.
+font.family: sans-serif
+font.sans-serif: IBM Plex Sans, DejaVu Sans
+font.monospace: IBM Plex Mono, DejaVu Sans Mono
+font.size: 8
+axes.titlesize: 9
+axes.titleweight: bold
+axes.titlelocation: left
+axes.labelsize: 8
+xtick.labelsize: 7
+ytick.labelsize: 7
+legend.fontsize: 7
+legend.frameon: False
+text.color: 1b2025
+axes.labelcolor: 43484e
+axes.edgecolor: 5f646a
+axes.facecolor: ffffff
+figure.facecolor: ffffff
+savefig.facecolor: ffffff
+axes.prop_cycle: cycler('color', ['1b2025', 'c52f15', '1762b6', '3d8e53', 'b6770b', '5288a2'])
+axes.spines.top: False
+axes.spines.right: False
+axes.linewidth: 0.60
+axes.grid: True
+axes.grid.axis: y
+axes.axisbelow: True
+grid.color: caced1
+grid.linewidth: 0.4
+xtick.color: 5f646a
+ytick.color: 5f646a
+xtick.labelcolor: 5f646a
+ytick.labelcolor: 5f646a
+lines.linewidth: 1
+lines.solid_capstyle: butt
+patch.edgecolor: ffffff
+image.cmap: cividis
+figure.dpi: 150
+savefig.dpi: 300
+savefig.bbox: tight
+svg.fonttype: none
+pdf.fonttype: 42

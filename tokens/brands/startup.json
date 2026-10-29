@@ -1,0 +1,11 @@
+{
+  "id": "startup",
+  "status": "reserved",
+  "defaultLook": null,
+  "$comment": "Slot for the future company brand. It shares the system (contract, components, guide, checks) but gets its own palette, looks, typefaces, logo and voice. Fill in when the name exists; until then tools refuse to build with it.",
+  "name":  { "en": null, "uk": null },
+  "short": { "en": null, "uk": null },
+  "links": {},
+  "languages": ["en", "uk"],
+  "voice": null
+}

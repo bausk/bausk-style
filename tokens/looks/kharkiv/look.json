@@ -1,0 +1,178 @@
+{
+  "id": "kharkiv",
+  "name": {
+    "en": "Kharkiv",
+    "uk": "Харків"
+  },
+  "status": "candidate",
+  "since": "0.1.0",
+  "reference": "A 1920s Kharkiv constructivist journal or book cover (Vasyl Yermilov, Nova Generatsiia): heavy grotesque set large, one red and black on grey uncoated paper, thick bars that divide the page, text blocks placed off-centre.",
+  "palette": "kharkiv",
+  "fonts": {
+    "text": {
+      "font": "arsenal",
+      "fallback": "Arsenal, \"Segoe UI\", system-ui, sans-serif"
+    },
+    "ui": {
+      "font": "fixel",
+      "fallback": "Fixel, \"Segoe UI\", system-ui, sans-serif"
+    },
+    "display": {
+      "font": "fixel",
+      "fallback": "Fixel, \"Arial Black\", system-ui, sans-serif"
+    },
+    "mono": {
+      "font": "plex-mono",
+      "fallback": "\"IBM Plex Mono\", ui-monospace, Consolas, monospace"
+    }
+  },
+  "color": {
+    "light": {
+      "bg": "{kharkiv.paper}",
+      "bg-subtle": "{kharkiv.paper-2}",
+      "bg-inverse": "{kharkiv.black}",
+      "fg": "{kharkiv.black}",
+      "fg-muted": "{kharkiv.grey-700}",
+      "fg-subtle": "{kharkiv.grey-600}",
+      "fg-inverse": "{kharkiv.paper}",
+      "line": "{kharkiv.paper-3}",
+      "line-strong": "{kharkiv.black}",
+      "accent": "{kharkiv.red}",
+      "accent-strong": "{kharkiv.red-deep}",
+      "accent-subtle": "{kharkiv.red-tint}",
+      "on-accent": "{kharkiv.paper}",
+      "focus": "{kharkiv.red}",
+      "selection": "{kharkiv.red-tint}",
+      "positive": "{kharkiv.olive}",
+      "negative": "{kharkiv.red}",
+      "caution": "{kharkiv.mustard-deep}",
+      "viz-1": "{kharkiv.black}",
+      "viz-2": "{kharkiv.red}",
+      "viz-3": "{kharkiv.grey-500}",
+      "viz-4": "{kharkiv.ink-blue}",
+      "viz-5": "{kharkiv.mustard}",
+      "viz-6": "{kharkiv.olive}",
+      "viz-up": "{kharkiv.black}",
+      "viz-down": "{kharkiv.red}",
+      "viz-muted": "{kharkiv.grey-400}",
+      "viz-grid": "{kharkiv.paper-3}",
+      "viz-axis": "{kharkiv.grey-600}",
+      "viz-label": "{kharkiv.grey-600}"
+    },
+    "dark": {
+      "bg": "{kharkiv.black}",
+      "bg-subtle": "{kharkiv.black-2}",
+      "bg-inverse": "{kharkiv.paper}",
+      "fg": "{kharkiv.paper}",
+      "fg-muted": "{kharkiv.paper-3}",
+      "fg-subtle": "{kharkiv.grey-400}",
+      "fg-inverse": "{kharkiv.black}",
+      "line": "{kharkiv.black-3}",
+      "line-strong": "{kharkiv.paper-3}",
+      "accent": "{kharkiv.red-light}",
+      "accent-strong": "{kharkiv.red-pale}",
+      "accent-subtle": "{kharkiv.red-night}",
+      "on-accent": "{kharkiv.black}",
+      "focus": "{kharkiv.red-light}",
+      "selection": "{kharkiv.red-night}",
+      "positive": "{kharkiv.olive-light}",
+      "negative": "{kharkiv.red-light}",
+      "caution": "{kharkiv.mustard-light}",
+      "viz-1": "{kharkiv.paper}",
+      "viz-2": "{kharkiv.red-light}",
+      "viz-3": "{kharkiv.grey-500}",
+      "viz-4": "{kharkiv.ink-blue-light}",
+      "viz-5": "{kharkiv.mustard-light}",
+      "viz-6": "{kharkiv.olive-light}",
+      "viz-up": "{kharkiv.paper}",
+      "viz-down": "{kharkiv.red-light}",
+      "viz-muted": "{kharkiv.grey-600}",
+      "viz-grid": "{kharkiv.black-3}",
+      "viz-axis": "{kharkiv.grey-400}",
+      "viz-label": "{kharkiv.grey-400}"
+    }
+  },
+  "size": {
+    "size-2xs": "0.75rem",
+    "size-xs": "0.8125rem",
+    "size-sm": "0.875rem",
+    "size-md": "1rem",
+    "size-text": "1.1875rem",
+    "size-lg": "1.375rem",
+    "size-xl": "1.75rem",
+    "size-2xl": "2.5rem",
+    "size-3xl": "3.5rem",
+    "size-4xl": "5.5rem"
+  },
+  "type": {
+    "leading-text": "1.55",
+    "leading-ui": "1.35",
+    "leading-tight": "0.98",
+    "weight-regular": "400",
+    "weight-medium": "500",
+    "weight-bold": "700",
+    "weight-display": "900",
+    "tracking-display": "-0.02em",
+    "tracking-label": "0.04em",
+    "label-case": "uppercase",
+    "label-stretch": "87.5%",
+    "label-weight": "700",
+    "display-stretch": "100%",
+    "ui-stretch": "87.5%"
+  },
+  "space": {
+    "space-1": "0.125rem",
+    "space-2": "0.25rem",
+    "space-3": "0.5rem",
+    "space-4": "0.75rem",
+    "space-5": "1rem",
+    "space-6": "1.5rem",
+    "space-7": "2.5rem",
+    "space-8": "4.5rem"
+  },
+  "layout": {
+    "measure-text": "38rem",
+    "measure-wide": "62rem",
+    "measure-page": "78rem",
+    "gutter": "clamp(1rem, 4vw, 2.5rem)",
+    "row-h": "2rem",
+    "control-h": "2.5rem"
+  },
+  "shape": {
+    "radius": "0",
+    "radius-control": "0",
+    "line-w": "1px",
+    "line-w-strong": "3px"
+  },
+  "motion": {
+    "duration-fast": "90ms",
+    "duration-base": "160ms",
+    "duration-slow": "280ms",
+    "ease-out": "cubic-bezier(0.3, 0.9, 0.2, 1)",
+    "ease-in-out": "cubic-bezier(0.7, 0, 0.3, 1)"
+  },
+  "media": {
+    "slide": {
+      "width": 1920,
+      "height": 1080,
+      "margin": 96,
+      "title": 128,
+      "lead": 48,
+      "body": 38,
+      "small": 28,
+      "foot": 24
+    },
+    "video": {
+      "actionSafe": 0.035,
+      "titleSafe": 0.05,
+      "minTextRatio": 0.033
+    },
+    "figure": {
+      "fontSize": 8,
+      "titleSize": 9.5,
+      "lineWidth": 1.0,
+      "singleColumnMm": 85,
+      "doubleColumnMm": 175
+    }
+  }
+}

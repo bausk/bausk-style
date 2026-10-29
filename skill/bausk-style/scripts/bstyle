@@ -1,0 +1,35 @@
+#!/bin/sh
+# Runs the bausk-style CLI that matches the current project's version.
+#   1. ./node_modules/bausk-style (walking up from the current directory)
+#   2. the version in bausk-style.json, from a cached checkout of tag v<version>
+#   3. the development checkout: $BAUSK_STYLE_HOME (default ~/bausk-style)
+# Set BAUSK_STYLE_REPO to a git URL to fetch tags from somewhere other than the dev checkout.
+set -e
+home="${BAUSK_STYLE_HOME:-$HOME/bausk-style}"
+repo="${BAUSK_STYLE_REPO:-$home}"
+dir=$(pwd)
+config=""
+while :; do
+  if [ -f "$dir/node_modules/bausk-style/cli/bausk-style.mjs" ]; then
+    exec node "$dir/node_modules/bausk-style/cli/bausk-style.mjs" "$@"
+  fi
+  if [ -z "$config" ] && [ -f "$dir/bausk-style.json" ]; then config="$dir/bausk-style.json"; fi
+  [ "$dir" = "/" ] && break
+  dir=$(dirname "$dir")
+done
+if [ -n "$config" ]; then
+  ver=$(sed -n 's/^[[:space:]]*"version":[[:space:]]*"\([^"]*\)".*/\1/p' "$config" | head -n 1)
+  if [ -n "$ver" ]; then
+    cache="${XDG_CACHE_HOME:-$HOME/.cache}/bausk-style/$ver"
+    if [ ! -f "$cache/cli/bausk-style.mjs" ]; then
+      if git clone -q --depth 1 --branch "v$ver" "$repo" "$cache" 2>/dev/null; then :; else
+        rm -rf "$cache"
+        echo "bausk-style: tag v$ver not found in $repo; using the development checkout ($home)" >&2
+      fi
+    fi
+    if [ -f "$cache/cli/bausk-style.mjs" ]; then exec node "$cache/cli/bausk-style.mjs" "$@"; fi
+  fi
+fi
+if [ -f "$home/cli/bausk-style.mjs" ]; then exec node "$home/cli/bausk-style.mjs" "$@"; fi
+echo "bausk-style: no CLI found. Install the package in the project or clone the repo to $home" >&2
+exit 1

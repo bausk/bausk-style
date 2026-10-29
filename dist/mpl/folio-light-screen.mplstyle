@@ -1,0 +1,43 @@
+# bausk-style 0.1.0 · look folio · light · screen · generated, do not edit.
+# plt.style.use("<path>/folio-light-screen.mplstyle")  or  bausk_style.use("folio", "light", "screen")
+# Fonts: matplotlib needs the TTF/OTF files installed (see guide/media/figures.md); otherwise DejaVu is used.
+font.family: sans-serif
+font.sans-serif: Source Sans 3, DejaVu Sans
+font.monospace: Source Code Pro, DejaVu Sans Mono
+font.size: 11
+axes.titlesize: 13
+axes.titleweight: bold
+axes.titlelocation: left
+axes.labelsize: 11
+xtick.labelsize: 10
+ytick.labelsize: 10
+legend.fontsize: 10
+legend.frameon: False
+text.color: 1c1b19
+axes.labelcolor: 46433d
+axes.edgecolor: 6a665e
+axes.facecolor: faf9f6
+figure.facecolor: faf9f6
+savefig.facecolor: faf9f6
+axes.prop_cycle: cycler('color', ['1c1b19', '8f2a1a', '1d5a57', '9a6a12', '1f4a78', '5b6b2e'])
+axes.spines.top: False
+axes.spines.right: False
+axes.linewidth: 0.96
+axes.grid: True
+axes.grid.axis: y
+axes.axisbelow: True
+grid.color: d9d5cc
+grid.linewidth: 0.6
+xtick.color: 6a665e
+ytick.color: 6a665e
+xtick.labelcolor: 6a665e
+ytick.labelcolor: 6a665e
+lines.linewidth: 1.6
+lines.solid_capstyle: butt
+patch.edgecolor: faf9f6
+image.cmap: cividis
+figure.dpi: 150
+savefig.dpi: 300
+savefig.bbox: tight
+svg.fonttype: none
+pdf.fonttype: 42

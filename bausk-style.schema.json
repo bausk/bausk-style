@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "bausk-style project configuration",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string",
+      "description": "bausk-style version the project was last synced with (bausk-style sync updates it). The launcher uses it when no node_modules install exists."
+    },
+    "brand": {
+      "type": "string",
+      "default": "bausk"
+    },
+    "look": {
+      "type": "string",
+      "default": "default",
+      "description": "\"default\" follows the brand's default look; a look id freezes the project on that look."
+    },
+    "scheme": {
+      "enum": [
+        "auto",
+        "light",
+        "dark"
+      ],
+      "default": "auto"
+    },
+    "media": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "reading",
+          "dashboard",
+          "slides",
+          "pptx",
+          "figures",
+          "game",
+          "video",
+          "web"
+        ]
+      }
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "uk",
+          "en"
+        ]
+      }
+    },
+    "rulesDir": {
+      "type": "string",
+      "default": "design/rules"
+    },
+    "rules": {
+      "type": "object",
+      "properties": {
+        "off": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string",
+            "description": "Why this rule does not apply here."
+          }
+        }
+      }
+    },
+    "check": {
+      "type": "object",
+      "properties": {
+        "allowColors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Third-party colours allowed as literals, e.g. ORCID green #a6ce39."
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

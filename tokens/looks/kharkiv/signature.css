@@ -1,0 +1,38 @@
+/* kharkiv · signature
+   Thick black bars divide the page; titles are heavy grotesque set tight; red is the one
+   accent and appears as solid blocks (a mark, a section slide, the current item), not
+   as tints. Layouts sit off-centre against a strong left edge. */
+@layer bs.signature {
+  .bs-header { border-bottom: var(--bs-line-w-strong) solid var(--bs-fg); }
+  .bs-header__name { font-weight: var(--bs-weight-display); text-transform: uppercase; letter-spacing: 0; }
+  .bs-nav a[aria-current] { background: var(--bs-accent); color: var(--bs-on-accent); border: 0; padding-inline: var(--bs-space-2); }
+
+  .bs-section-head { border-top-width: 0.5rem; }
+  .bs-section-head__title { font-family: var(--bs-font-display); font-weight: var(--bs-weight-display); text-transform: uppercase; font-size: var(--bs-size-lg); letter-spacing: 0; }
+
+  .bs-entry { border-bottom-width: var(--bs-line-w); border-bottom-color: var(--bs-fg); }
+  .bs-entry__title { font-family: var(--bs-font-display); font-weight: 800; font-size: var(--bs-size-xl); letter-spacing: var(--bs-tracking-display); }
+
+  .bs-article__title { font-size: var(--bs-size-4xl); text-transform: uppercase; }
+  .bs-meta { border-top: 0.5rem solid var(--bs-fg); padding-top: var(--bs-space-4); max-width: var(--bs-measure-text); }
+  .bs-meta dt { color: var(--bs-accent); }
+
+  .bs-mark { background: var(--bs-accent); color: var(--bs-on-accent); padding: 0 0.15em; }
+
+  .bs-panel { border: 0; border-top: var(--bs-line-w-strong) solid var(--bs-fg); }
+  .bs-panel__head { border-bottom: 0; padding-inline: 0; }
+  .bs-panel__body { padding-inline: 0; }
+  .bs-panel__title { font-family: var(--bs-font-display); font-weight: var(--bs-weight-display); text-transform: uppercase; font-size: var(--bs-size-md); }
+
+  .bs-slide::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: calc(40 * 100cqw / 1920); background: var(--bs-accent); }
+  .bs-slide__frame { padding-left: calc((var(--bs-slide-margin) + 60) * var(--px)); }
+  .bs-slide__title { text-transform: uppercase; max-width: 92%; }
+  .bs-slide__foot { border-top: calc(6 * var(--px)) solid currentColor; padding-top: calc(14 * var(--px)); text-transform: uppercase; font-weight: var(--bs-weight-bold); }
+  .bs-slide--section { background: var(--bs-accent); color: var(--bs-on-accent); }
+  .bs-slide--section::before { background: var(--bs-fg); }
+
+  .bs-titlecard__title { text-transform: uppercase; font-size: calc(132 * var(--px)); }
+  .bs-lowerthird { background: var(--bs-fg); color: var(--bs-bg); border-left: calc(18 * var(--px)) solid var(--bs-accent); }
+  .bs-lowerthird__role { color: inherit; }
+  .bs-thumb__words { text-transform: uppercase; }
+}

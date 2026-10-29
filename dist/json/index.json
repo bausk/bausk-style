@@ -1,0 +1,142 @@
+{
+  "version": "0.1.0",
+  "contract": {
+    "bg": "color",
+    "bg-subtle": "color",
+    "bg-inverse": "color",
+    "fg": "color",
+    "fg-muted": "color",
+    "fg-subtle": "color",
+    "fg-inverse": "color",
+    "line": "color",
+    "line-strong": "color",
+    "accent": "color",
+    "accent-strong": "color",
+    "accent-subtle": "color",
+    "on-accent": "color",
+    "focus": "color",
+    "selection": "color",
+    "positive": "color",
+    "negative": "color",
+    "caution": "color",
+    "viz-1": "color",
+    "viz-2": "color",
+    "viz-3": "color",
+    "viz-4": "color",
+    "viz-5": "color",
+    "viz-6": "color",
+    "viz-up": "color",
+    "viz-down": "color",
+    "viz-muted": "color",
+    "viz-grid": "color",
+    "viz-axis": "color",
+    "viz-label": "color",
+    "font-text": "font",
+    "font-ui": "font",
+    "font-display": "font",
+    "font-mono": "font",
+    "size-2xs": "size",
+    "size-xs": "size",
+    "size-sm": "size",
+    "size-md": "size",
+    "size-text": "size",
+    "size-lg": "size",
+    "size-xl": "size",
+    "size-2xl": "size",
+    "size-3xl": "size",
+    "size-4xl": "size",
+    "leading-text": "type",
+    "leading-ui": "type",
+    "leading-tight": "type",
+    "weight-regular": "type",
+    "weight-medium": "type",
+    "weight-bold": "type",
+    "weight-display": "type",
+    "tracking-display": "type",
+    "tracking-label": "type",
+    "label-case": "type",
+    "label-stretch": "type",
+    "label-weight": "type",
+    "display-stretch": "type",
+    "ui-stretch": "type",
+    "space-1": "space",
+    "space-2": "space",
+    "space-3": "space",
+    "space-4": "space",
+    "space-5": "space",
+    "space-6": "space",
+    "space-7": "space",
+    "space-8": "space",
+    "measure-text": "layout",
+    "measure-wide": "layout",
+    "measure-page": "layout",
+    "gutter": "layout",
+    "row-h": "layout",
+    "control-h": "layout",
+    "radius": "shape",
+    "radius-control": "shape",
+    "line-w": "shape",
+    "line-w-strong": "shape",
+    "duration-fast": "motion",
+    "duration-base": "motion",
+    "duration-slow": "motion",
+    "ease-out": "motion",
+    "ease-in-out": "motion",
+    "slide-margin": "media",
+    "slide-title": "media",
+    "slide-lead": "media",
+    "slide-body": "media",
+    "slide-small": "media",
+    "slide-foot": "media",
+    "video-action-safe": "media",
+    "video-title-safe": "media"
+  },
+  "brands": {
+    "bausk": {
+      "status": "active",
+      "defaultLook": "sheet"
+    },
+    "startup": {
+      "status": "reserved",
+      "defaultLook": null
+    }
+  },
+  "looks": {
+    "kharkiv": {
+      "name": {
+        "en": "Kharkiv",
+        "uk": "Харків"
+      },
+      "status": "candidate",
+      "since": "0.1.0",
+      "palette": "kharkiv"
+    },
+    "sheet": {
+      "name": {
+        "en": "Sheet",
+        "uk": "Аркуш"
+      },
+      "status": "candidate",
+      "since": "0.1.0",
+      "palette": "graphite"
+    },
+    "survey": {
+      "name": {
+        "en": "Survey",
+        "uk": "Планшет"
+      },
+      "status": "candidate",
+      "since": "0.1.0",
+      "palette": "survey"
+    },
+    "folio": {
+      "name": {
+        "en": "Folio (2026 site)",
+        "uk": "Фоліо (сайт 2026)"
+      },
+      "status": "legacy",
+      "since": "0.1.0",
+      "palette": "folio"
+    }
+  }
+}
