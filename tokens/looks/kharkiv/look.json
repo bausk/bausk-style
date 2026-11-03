@@ -174,5 +174,28 @@
       "singleColumnMm": 85,
       "doubleColumnMm": 175
     }
+  },
+  "desktop": {
+    "$comment": "Families as desktop tools see them (matplotlib, PowerPoint). TTFs live in fonts/ttf/ (scripts/fetch-desktop-fonts.mjs).",
+    "text": "Arsenal",
+    "ui": "Fixel Text",
+    "display": "Fixel Display",
+    "mono": "IBM Plex Mono",
+    "office": {
+      "major": "Fixel Display Black",
+      "minor": "Arsenal",
+      "ui": "Fixel Text Medium",
+      "uiBold": "Fixel Text Bold",
+      "mono": "IBM Plex Mono"
+    },
+    "files": [
+      "fixel/FixelText-Regular.ttf",
+      "fixel/FixelText-Bold.ttf",
+      "fixel/FixelDisplay-Bold.ttf",
+      "arsenal/Arsenal-Regular.ttf",
+      "arsenal/Arsenal-Bold.ttf",
+      "arsenal/Arsenal-Italic.ttf",
+      "plex-mono/IBMPlexMono-Regular.ttf"
+    ]
   }
 }

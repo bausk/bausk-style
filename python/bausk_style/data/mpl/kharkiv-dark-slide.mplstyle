@@ -1,8 +1,8 @@
-# bausk-style 0.1.0 · look kharkiv · dark · slide · generated, do not edit.
+# bausk-style 0.2.0 · look kharkiv · dark · slide · generated, do not edit.
 # plt.style.use("<path>/kharkiv-dark-slide.mplstyle")  or  bausk_style.use("kharkiv", "dark", "slide")
-# Fonts: matplotlib needs the TTF/OTF files installed (see guide/media/figures.md); otherwise DejaVu is used.
+# Fonts: bausk_style.use() registers the bundled TTFs; with plt.style.use() alone, install them (dist/fonts/ttf/) or DejaVu is used.
 font.family: sans-serif
-font.sans-serif: Fixel, DejaVu Sans
+font.sans-serif: Fixel Text, DejaVu Sans
 font.monospace: IBM Plex Mono, DejaVu Sans Mono
 font.size: 20
 axes.titlesize: 26

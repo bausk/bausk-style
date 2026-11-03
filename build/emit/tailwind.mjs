@@ -3,8 +3,8 @@
 // `rounded-2xl`, `shadow-lg` or `backdrop-blur` do not exist in a bausk-style project.
 // Use with the look's CSS (which defines the variables):
 //   @import "tailwindcss";
-//   @import "bausk-style/css/sheet.css";
-//   @import "bausk-style/tailwind/sheet.css";
+//   @import "bausk-style/css/kharkiv.css";
+//   @import "bausk-style/tailwind/kharkiv.css";
 export function tailwindCss(look, contract, meta) {
   const colors = Object.keys(contract.color);
   const sizes = Object.keys(contract.size);

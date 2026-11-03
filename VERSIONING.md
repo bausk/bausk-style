@@ -6,7 +6,7 @@ bausk-style separates three things that change at different speeds:
 |---|---|---|
 | **Contract** | Token names (`tokens/contract.json`), component classes (`bs-*`), CLI commands, file paths in `dist/`, the Python and JS APIs | Additive in minor releases. Removing or renaming anything is a **major** release, with the old name kept as a deprecated alias for one major and a migration note. |
 | **Palettes** | Named colours (`tokens/palettes/*.json`) | **Frozen once released.** A released colour never changes value and is never removed. New colours or new palettes are added instead. Enforced by `tokens/frozen.json` in the test suite. |
-| **Looks** | A mapping of contract names to palette colours, fonts, sizes and signature CSS, plus LOOK.md | **Frozen once released**, except documented patch fixes (contrast, a rendering bug). Evolution means a **new look id** (e.g. `sheet-2027`). Old looks stay available until the next major, marked `legacy` or `deprecated`. |
+| **Looks** | A mapping of contract names to palette colours, fonts, sizes and signature CSS, plus LOOK.md | **Frozen once released**, except documented patch fixes (contrast, a rendering bug). Evolution means a **new look id** (e.g. `kharkiv-2027`). Old looks stay available until the next major, marked `legacy` or `deprecated`. |
 | **Guide and rules** | `guide/`, `rules/` | May change in any minor release. Rule ids are never reused. |
 
 Brands point at a look (`tokens/brands/<brand>.json → defaultLook`). Moving a brand to a new look

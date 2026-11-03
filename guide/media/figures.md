@@ -14,7 +14,6 @@ fig.savefig("fig2.pdf")                              # fonts embedded (Type 42)
 - Greyscale-safe: vary line style or marker too when the figure may be printed.
 - Units on axes, a caption with what/unit/source; number figures (Fig. 2 / Рис. 2).
 - Web figures: `medium="screen"`, export SVG; slide figures: `medium="slide"`.
-- Fonts: matplotlib needs TTF/OTF files installed on the system (it cannot read woff2). Install the
-  look's families once (`fc-list | grep -i <family>` to check); otherwise it falls back to DejaVu
-  Sans, which is acceptable for drafts only.
+- Fonts: `bs.use()` registers the look's bundled TTFs with matplotlib, so no system install is
+  needed. With a bare `plt.style.use(path)`, install `dist/fonts/ttf/**` first or text falls back to DejaVu Sans.
 - Plotly: `template=bs.plotly_template()`; candlesticks get the look's up/down colours.

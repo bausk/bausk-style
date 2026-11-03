@@ -12,8 +12,8 @@ Usage: bausk-style <command> [options]
   brief [--media m,..]    Print the design brief for this project: look, tokens, rules,
                           what to read next and how to verify. Agents start here.
   init  [--brand bausk] [--look default|<id>] [--media m,..] [--scheme auto|light|dark] [--agents]
-                          Create bausk-style.json and DESIGN.md here (and Quarto _brand.yml for
-                          slides). --agents adds a short pointer block to AGENTS.md/CLAUDE.md.
+                          Create bausk-style.json and DESIGN.md here (and the Quarto extension
+                          _extensions/bausk/ for slides). --agents adds a short pointer block to AGENTS.md/CLAUDE.md.
   sync                    Regenerate DESIGN.md and copied assets for the installed version;
                           keeps everything under "## Project rules".
   check [paths..] [--json]
@@ -23,6 +23,10 @@ Usage: bausk-style <command> [options]
   looks                   List looks and their status.
   shot <file|url> [--out f.png] [--width 1440] [--scheme light|dark] [--selector css]
                           Screenshot a page with headless Chromium for visual review.
+  video <kind> [--out f.png] [--scheme light|dark] ...
+                          Render video graphics as PNG in the project's look:
+                          titlecard --title --sub · chapter --title [--sub] · lowerthird --name --role
+                          (transparent) · endcard --title [--sub] [--links] · thumbnail --words [--image]
   path                    Print the package directory (guide/, rules/, dist/ live there).
 
 Media: ${MEDIA.join(', ')}`;
@@ -31,7 +35,7 @@ const args = process.argv.slice(2);
 const cmd = args[0] ?? 'help';
 const opt = (name, def) => { const i = args.indexOf(`--${name}`); return i >= 0 ? (args[i + 1] && !args[i + 1].startsWith('--') ? args[i + 1] : true) : def; };
 const list = (v) => (typeof v === 'string' ? v.split(',').map((s) => s.trim()).filter(Boolean) : []);
-const VALUED = new Set(['--media', '--brand', '--look', '--scheme', '--out', '--width', '--selector']);
+const VALUED = new Set(['--media', '--brand', '--look', '--scheme', '--out', '--width', '--selector', '--title', '--sub', '--name', '--role', '--links', '--words', '--image', '--lang']);
 const positional = () => {
   const out = [];
   for (let i = 1; i < args.length; i++) {
@@ -61,11 +65,10 @@ async function designMdFor(look, brandId, keep) {
   return `${body.trimEnd()}\n\n${PROJECT_MARK}\n\n${tail.trim()}\n`;
 }
 
+// Slides: the Quarto reveal.js extension for the look (fonts included). Decks use `format: bausk-revealjs`.
 function copyQuarto(projectDir, lookId) {
-  const src = join(PKG_ROOT, 'dist', 'quarto', lookId);
-  cpSync(join(src, '_brand.yml'), join(projectDir, '_brand.yml'));
-  const fonts = new Set([...readFileSync(join(src, '_brand.yml'), 'utf8').matchAll(/path: fonts\/([\w-]+)\//g)].map((m) => m[1]));
-  for (const f of fonts) cpSync(join(PKG_ROOT, 'dist', 'fonts', f), join(projectDir, 'fonts', f), { recursive: true });
+  const src = join(PKG_ROOT, 'dist', 'quarto', lookId, '_extensions', 'bausk');
+  cpSync(src, join(projectDir, '_extensions', 'bausk'), { recursive: true });
 }
 
 const AGENTS_BLOCK = `<!-- bausk-style:begin -->
@@ -76,6 +79,21 @@ presentational work (UI, charts, slides, figures, video, game screens, and the c
 \`npx bausk-style brief\` and follow it. Before calling the work done, run \`npx bausk-style check\`
 and look at a screenshot at the size it ships.
 <!-- bausk-style:end -->`;
+
+// Concrete entry points per medium, printed in the brief.
+function toolsFor(media, lookId) {
+  const T = {
+    slides: `Slides: \`format: bausk-revealjs\` (extension in _extensions/bausk/, from \`bausk-style init --media slides\`). Worked deck: ${join(PKG_ROOT, 'templates', 'slides-quarto', 'lecture.qmd')}`,
+    pptx: `PowerPoint: template ${join(PKG_ROOT, 'dist', 'pptx', `bausk-${lookId}.potx`)}; fonts via scripts/install-fonts-windows.ps1; check with scripts/render-pptx-windows.ps1`,
+    video: 'Video: `bausk-style video titlecard|chapter|lowerthird|endcard|thumbnail ...` writes PNGs (lower third is transparent)',
+    figures: 'Figures: `bausk_style.use("default", medium="paper"|"screen"|"slide")`, `bausk_style.figsize("single")`, `bausk_style.plotly_template()`',
+    dashboard: 'Dashboard: Tailwind `bausk-style/tailwind/<brand|look>.css`; charts `lightweightChartsOptions(readTokens())` + `candleColors(t)` from "bausk-style"',
+    game: 'Game: `readTokens()` and `toInt(hex)` from "bausk-style" for canvas/Phaser/PixiJS colours; HUD markup `bs-hud`, board `bs-board`',
+    reading: 'Reading: components `bs-article__title`, `bs-meta`, `bs-prose`, `bs-figure`, `bs-entries`; CSS `bausk-style/css/<brand|look>.css`',
+  };
+  const lines = (media.length ? media : ['reading']).map((m) => T[m]).filter(Boolean);
+  return lines.length ? `## Tools\n\n${lines.map((l) => `- ${l}`).join('\n')}\n\n` : '';
+}
 
 async function main() {
   switch (cmd) {
@@ -136,7 +154,7 @@ ${colorRows}
 Fonts: text ${look.fonts.text.family}; ui ${look.fonts.ui.family}; display ${look.fonts.display.family}; mono ${look.fonts.mono.family}.
 Sizes: ${['2xs', 'xs', 'sm', 'md', 'text', 'lg', 'xl', '2xl', '3xl', '4xl'].map((s) => `${s} ${v[`size-${s}`]}`).join(' · ')}
 Space: ${[1, 2, 3, 4, 5, 6, 7, 8].map((s) => `${s}=${v[`space-${s}`]}`).join(' ')} · Measure ${v['measure-text']} · Radius ${v.radius}/${v['radius-control']} · Lines ${v['line-w']}/${v['line-w-strong']}
-Components (class API, same in every look): bs-page, bs-header, bs-nav, bs-section-head, bs-entries/bs-entry, bs-article__title, bs-article__standfirst, bs-meta, bs-prose, bs-figure, bs-callout, bs-mark, bs-label, bs-table, bs-panel, bs-stat, bs-tag, bs-btn(--primary), bs-input, bs-segmented, bs-chart, bs-slide(--section), bs-video, bs-titlecard, bs-lowerthird, bs-thumb__words, bs-hud, bs-board. Worked example of every one: ${join(PKG_ROOT, 'dist', 'specimen', `${lookId}.html`)}
+Components (class API, same in every look): bs-page, bs-header, bs-nav, bs-section-head, bs-entries/bs-entry, bs-article__title, bs-article__standfirst, bs-meta, bs-prose, bs-figure, bs-callout, bs-mark, bs-label, bs-table, bs-panel, bs-stat, bs-tag, bs-btn(--primary), bs-input, bs-segmented, bs-chart, bs-slide(--section), bs-video(--section), bs-titlecard, bs-lowerthird, bs-thumb__words, bs-hud, bs-board. Worked example of every one: ${join(PKG_ROOT, 'dist', 'specimen', `${lookId}.html`)}
 
 ## Rules in force${media.length ? ` (${media.join(', ')})` : ''}
 
@@ -144,7 +162,7 @@ ${rules.map((r) => `- **${r.id}** (${r.severity}${r.disabled ? `, switched off: 
 
 Full text: ${join(PKG_ROOT, 'rules')}/<id>.md${projectDir ? ` and ${join(projectDir, config.rulesDir ?? 'design/rules')}/` : ''}
 ${projRulesFile ? `\n## Project rules (from DESIGN.md)\n\n${projRulesFile.replace(/^## Project rules\s*/m, '')}\n` : ''}
-## Read next
+${toolsFor(media, lookId)}## Read next
 
 - ${join(PKG_ROOT, 'guide', 'anti-slop.md')}
 ${mediaGuides.map((m) => `- ${join(PKG_ROOT, 'guide', 'media', `${m}.md`)}`).join('\n')}
@@ -182,7 +200,7 @@ ${mediaGuides.map((m) => `- ${join(PKG_ROOT, 'guide', 'media', `${m}.md`)}`).joi
       writeFileSync(join(dir, CONFIG), JSON.stringify(config, null, 2) + '\n');
       writeFileSync(join(dir, 'DESIGN.md'), await designMdFor(lookId, brand));
       const made = [CONFIG, 'DESIGN.md'];
-      if (config.media.includes('slides')) { copyQuarto(dir, lookId); made.push('_brand.yml', 'fonts/'); }
+      if (config.media.includes('slides')) { copyQuarto(dir, lookId); made.push('_extensions/bausk/'); }
       if (opt('agents')) {
         for (const f of ['AGENTS.md', 'CLAUDE.md']) {
           const p = join(dir, f);
@@ -206,7 +224,7 @@ ${mediaGuides.map((m) => `- ${join(PKG_ROOT, 'guide', 'media', `${m}.md`)}`).joi
       const dmPath = join(projectDir, 'DESIGN.md');
       const keep = existsSync(dmPath) ? readFileSync(dmPath, 'utf8').split(PROJECT_MARK)[1] : undefined;
       writeFileSync(dmPath, await designMdFor(lookId, config.brand ?? 'bausk', keep));
-      if (existsSync(join(projectDir, '_brand.yml')) || (config.media ?? []).includes('slides')) copyQuarto(projectDir, lookId);
+      if (existsSync(join(projectDir, '_extensions', 'bausk')) || (config.media ?? []).includes('slides')) copyQuarto(projectDir, lookId);
       const prev = config.version;
       config.version = pkgVersion();
       writeFileSync(join(projectDir, CONFIG), JSON.stringify(config, null, 2) + '\n');
@@ -237,6 +255,21 @@ ${mediaGuides.map((m) => `- ${join(PKG_ROOT, 'guide', 'media', `${m}.md`)}`).joi
       const out = opt('out', 'bausk-style-shot.png');
       const [file] = await shoot([{ url: target, out, width: Number(opt('width', 1440)), scheme: opt('scheme', 'light'), selector: opt('selector') || undefined }]);
       console.log(resolve(file));
+      return;
+    }
+
+    case 'video': {
+      const { renderVideo } = await import('./video.mjs');
+      const kind = positional()[0];
+      const config = readConfig(findProject()) ?? {};
+      const lookId = resolveLookId(config);
+      const css = join(PKG_ROOT, 'dist', 'css', `${lookId}.css`);
+      const get = (k) => (typeof opt(k) === 'string' ? opt(k) : undefined);
+      const file = await renderVideo({
+        kind, cssPath: css, out: get('out') ?? `${kind}.png`, scheme: get('scheme') ?? 'light', lang: get('lang') ?? 'uk',
+        opts: { title: get('title'), sub: get('sub'), name: get('name'), role: get('role'), links: get('links'), words: get('words'), image: get('image') },
+      });
+      console.log(file);
       return;
     }
 

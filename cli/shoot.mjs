@@ -25,7 +25,7 @@ export function findChrome() {
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-// shots: [{ url, out, width=1440, height=900, selector?, scheme? ('light'|'dark') }]
+// shots: [{ url, out, width=1440, height=900, selector?, scheme? ('light'|'dark'), script? (JS run before capture), transparent? }]
 export async function shoot(shots) {
   const chrome = findChrome();
   const profile = mkdtempSync(join(tmpdir(), 'bs-chrome-'));
@@ -60,6 +60,7 @@ export async function shoot(shots) {
       await send('Page.navigate', { url });
       for (let i = 0; i < 200 && !events.includes('Page.loadEventFired'); i++) await sleep(50);
       await evaluate('document.fonts.ready.then(() => true)');
+      if (s.script) { await evaluate(s.script); await sleep(300); }
       await sleep(150);
       let clip;
       if (s.selector) {
@@ -68,7 +69,11 @@ export async function shoot(shots) {
         const h = await evaluate('document.documentElement.scrollHeight');
         clip = { x: 0, y: 0, width, height: Math.min(h, s.maxHeight ?? 16000) };
       }
-      const { data } = await send('Page.captureScreenshot', { format: 'png', captureBeyondViewport: true, clip: { ...clip, scale: 1 } });
+      // Capturing beyond the viewport resizes it, which makes some pages (reveal.js) re-lay out and
+      // lose state; only do it when the clip is taller than the viewport.
+      const beyond = clip.y + clip.height > height || clip.x + clip.width > width;
+      await send('Emulation.setDefaultBackgroundColorOverride', s.transparent ? { color: { r: 0, g: 0, b: 0, a: 0 } } : {});
+      const { data } = await send('Page.captureScreenshot', { format: 'png', captureBeyondViewport: beyond, clip: { ...clip, scale: 1 } });
       writeFileSync(s.out, Buffer.from(data, 'base64'));
       outs.push(s.out);
     }

@@ -6,9 +6,13 @@
 //   bausk-style-ignore <rule-id>: <reason>
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { join, relative, extname } from 'node:path';
+import { execFileSync } from 'node:child_process';
 import { pkgVersion } from './lib.mjs';
 
-const SKIP_DIRS = new Set(['node_modules', '.git', 'dist', 'build', 'out', '.next', '.nuxt', '.svelte-kit', '.astro', 'coverage', 'vendor', '.venv', 'venv', '__pycache__', '.quarto', '_site', '_freeze', '.ref', '.shots', 'fonts']);
+const SKIP_DIRS = new Set(['node_modules', '.git', 'dist', 'build', 'out', '.next', '.nuxt', '.svelte-kit', '.astro', 'coverage', 'vendor', '.venv', 'venv', '__pycache__', '.quarto', '_site', '_freeze', '_extensions', 'site_libs', '.ref', '.shots', 'fonts', 'fixtures']);
+// Generated output: pandoc/Quarto "<doc>_files" folders, and HTML rendered from a .qmd/.Rmd/.ipynb next to it.
+const isGeneratedDir = (name) => SKIP_DIRS.has(name) || name.endsWith('_files');
+const isRenderedHtml = (p) => /\.html$/.test(p) && ['.qmd', '.Rmd', '.ipynb', '.md'].some((ext) => existsSync(p.replace(/\.html$/, ext)));
 const STYLE = new Set(['.css', '.scss', '.sass', '.less']);
 const MARKUP = new Set(['.html', '.hbs', '.vue', '.svelte', '.astro', '.jsx', '.tsx']);
 const SCRIPT = new Set(['.js', '.mjs', '.cjs', '.ts', '.mts']);
@@ -42,11 +46,11 @@ const BANNED_FONTS = /\b(Inter|Poppins|Montserrat|Space Grotesk|Lora|Playfair Di
 
 function walk(dir, files = []) {
   for (const name of readdirSync(dir)) {
-    if (SKIP_DIRS.has(name)) continue;
+    if (isGeneratedDir(name)) continue;
     const p = join(dir, name);
     let st; try { st = statSync(p); } catch { continue; }
     if (st.isDirectory()) walk(p, files);
-    else if (ALL.has(extname(name)) && !/\.min\.|\.generated\.|DESIGN\.md$|CHANGELOG\.md$/.test(name)) files.push(p);
+    else if (ALL.has(extname(name)) && !/\.min\.|\.generated\.|DESIGN\.md$|CHANGELOG\.md$/.test(name) && !isRenderedHtml(p)) files.push(p);
   }
   return files;
 }
@@ -59,7 +63,12 @@ export function check({ root, paths = [], config = {}, lookStatus = null }) {
   const allow = new Set((config.check?.allowColors ?? []).map(norm));
   const off = config.rules?.off ?? {};
   const targets = paths.length ? paths : [root];
-  const files = targets.flatMap((t) => (statSync(t).isDirectory() ? walk(t) : [t]));
+  let files = targets.flatMap((t) => (statSync(t).isDirectory() ? walk(t) : [t]));
+  try { // inside a git repository, skip what .gitignore excludes
+    const listed = new Set(execFileSync('git', ['ls-files', '--cached', '--others', '--exclude-standard', '-z'], { cwd: root, stdio: ['ignore', 'pipe', 'ignore'] })
+      .toString().split('\0').filter(Boolean).map((f) => join(root, f)));
+    if (listed.size) files = files.filter((f) => listed.has(f) || paths.includes(f));
+  } catch { /* not a git repository */ }
 
   for (const file of files) {
     const ext = extname(file);
@@ -102,10 +111,10 @@ export function check({ root, paths = [], config = {}, lookStatus = null }) {
       // CSS properties
       if (styleCtx) {
         let m;
-        if ((m = line.match(/box-shadow\s*:\s*(?!\s|none|0\b|var\(--bs-)/))) flag('no-decorative-depth', 'error', m.index, 'box-shadow: no shadows in this system');
+        if ((m = line.match(/box-shadow\s*:\s*(?!\s|none\b|0(?:px)?\s*(?:;|}|!|$)|var\(--bs-)/))) flag('no-decorative-depth', 'error', m.index, 'box-shadow: no shadows in this system');
         if ((m = line.match(/(?:linear|radial|conic)-gradient\(/))) flag('no-decorative-depth', 'error', m.index, 'gradient: no gradients in this system');
         if ((m = line.match(/backdrop-filter\s*:|filter\s*:\s*[^;]*(?:blur|drop-shadow)\(/))) flag('no-decorative-depth', 'error', m.index, 'blur/glass effect');
-        if ((m = line.match(/border-radius\s*:\s*(?!\s|0\b|0px|var\(--bs-radius|inherit)([^;]+)/))) flag('radius-from-look', 'error', m.index, `border-radius ${m[1].trim()}: use var(--bs-radius) or var(--bs-radius-control)`);
+        if ((m = line.match(/border-radius\s*:\s*(?!\s|0(?:px)?\s*(?:;|}|!|$)|var\(--bs-radius|inherit)([^;]+)/))) flag('radius-from-look', 'error', m.index, `border-radius ${m[1].trim()}: use var(--bs-radius) or var(--bs-radius-control)`);
         if ((m = line.match(/font-family\s*:\s*(?!\s|var\(--bs-font|inherit)([^;]+)/))) flag('tokens-only', 'warn', m.index, `font-family ${m[1].trim()}: use var(--bs-font-text|ui|display|mono)`);
         if ((m = line.match(/transition\s*:\s*[^;]*\b(\d{3,4})ms/)) && Number(m[1]) > 400) flag('focus-and-motion', 'warn', m.index, `transition ${m[1]}ms: use --bs-duration-* tokens`);
       }

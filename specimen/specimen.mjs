@@ -162,7 +162,7 @@ export function renderSpecimen(look, brand, meta, allLooks) {
   const g = board();
   const thumbBoard = board({ cell: 30, fill: true });
   const matches = [
-    { label: 'SIFT', cls: 's3', color: 'viz-3', values: [412, 398, 377, 401, 356, 333, 341, 302, 288, 296, 270, 251, 263, 240, 236, 228] },
+    { label: 'SIFT', cls: 's1', color: 'viz-1', values: [412, 398, 377, 401, 356, 333, 341, 302, 288, 296, 270, 251, 263, 240, 236, 228] },
     { label: 'ORB', cls: 's2', color: 'viz-2', values: [301, 276, 259, 270, 231, 214, 208, 187, 170, 175, 151, 144, 139, 128, 122, 117] },
     { label: 'AKAZE', cls: 'muted', color: 'viz-muted', values: [356, 340, 322, 335, 300, 290, 286, 260, 249, 252, 236, 220, 224, 209, 204, 199] },
   ];

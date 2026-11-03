@@ -12,7 +12,7 @@ A 1920s Kharkiv constructivist journal or book cover, in the tradition of Vasyl 
 
 ## Typography
 
-Fixel (a Ukrainian grotesque by MacPaw) in its Display width at weight 900 for titles, set tight (`leading-tight: 0.98`) and in capitals on slides and covers. Fixel Text, slightly condensed, for interface and labels. Arsenal, a Ukrainian semi-grotesque, for reading text. IBM Plex Mono for code and data. Big type is the image; there are no illustrations for decoration.
+Fixel (a Ukrainian grotesque by MacPaw) in its Display width at weight 900 for titles, set tight (`leading-tight: 0.98`). Capitals for short titles only: slides, covers, thumbnails, section heads, panel titles. Article titles are long and stay in sentence case. Fixel Text, slightly condensed, for interface and labels. Arsenal, a Ukrainian semi-grotesque, for reading text. IBM Plex Mono for code and data. Big type is the image; there are no illustrations for decoration.
 
 ## Layout
 
@@ -38,5 +38,5 @@ Square. Main lines are heavy (3px in UI, 0.5rem bars for section heads, 6–40px
 - **Do** let one thing be very large per view.
 - **Do** use real numbers when a numeral is the image (a lecture number, a year, a measured value).
 - **Don't** use diagonal type, rotated blocks or Soviet iconography (stars, hammers, propaganda slogans); the reference is the typographic method, not the politics.
-- **Don't** set long reading text in Fixel Display or in capitals.
+- **Don't** set long reading text or long titles (more than about six words) in Fixel Display capitals.
 - **Don't** introduce a second accent; red and black do all the work.

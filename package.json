@@ -1,6 +1,6 @@
 {
   "name": "bausk-style",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Oleksandr Bausk's house style: versioned design tokens, looks, components, an agent guidebook and guardrail checks for web, dashboards, slides, figures, games and video.",
   "type": "module",
   "license": "MIT",
@@ -27,7 +27,9 @@
     "./quarto/*": "./dist/quarto/*",
     "./design/*": "./dist/design/*",
     "./guide/*": "./guide/*",
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./pptx/*": "./dist/pptx/*",
+    "./templates/*": "./templates/*"
   },
   "files": [
     "dist",
@@ -42,7 +44,10 @@
     "VERSIONING.md",
     "CHANGELOG.md",
     "README.md",
-    "bausk-style.schema.json"
+    "bausk-style.schema.json",
+    "templates",
+    "scripts",
+    "fonts/desktop.json"
   ],
   "engines": {
     "node": ">=20"

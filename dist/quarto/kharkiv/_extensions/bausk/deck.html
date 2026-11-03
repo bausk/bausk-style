@@ -1,0 +1,26 @@
+<script>
+/* bausk-style: put the deck footer and "n / N" inside every slide, so they scale with it and print to PDF.
+   Footer text comes from the deck's `footer:` option. Add class .no-foot to a slide to hide it. */
+(function () {
+  function place() {
+    var deck = window.Reveal; if (!deck) return;
+    // Slides keep a fixed top-left composition; undo reveal's vertical centring.
+    document.querySelectorAll('.reveal .slides section.center').forEach(function (s) { s.classList.remove('center'); });
+    var src = document.querySelector('.reveal .footer');
+    var text = src ? src.textContent.trim() : '';
+    var slides = deck.getSlides();
+    slides.forEach(function (s, i) {
+      if (s.id === 'title-slide' && !text) return;
+      var f = s.querySelector(':scope > .bs-deck-foot');
+      if (!f) { f = document.createElement('div'); f.className = 'bs-deck-foot'; s.appendChild(f); }
+      f.innerHTML = '<span></span><span class="bs-deck-foot__no"></span>';
+      f.firstChild.textContent = text;
+      f.lastChild.textContent = (i + 1) + ' / ' + slides.length;
+    });
+    deck.layout();
+  }
+  if (window.Reveal && window.Reveal.isReady && window.Reveal.isReady()) place();
+  else if (window.Reveal) window.Reveal.on('ready', place);
+  else window.addEventListener('load', function () { window.Reveal && window.Reveal.on('ready', place); });
+})();
+</script>

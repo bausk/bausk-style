@@ -1,0 +1,25 @@
+# bausk-style 0.2.0 · look "kharkiv" · generated, do not edit.
+title: bausk-style (kharkiv)
+author: Oleksandr Bausk
+version: 0.2.0
+quarto-required: ">=1.6.0"
+contributes:
+  formats:
+    revealjs:
+      theme: [default, bausk.scss]
+      css: [bausk.css]
+      include-after-body: [deck.html]
+      format-resources: [fonts]
+      width: 1920
+      height: 1080
+      margin: 0
+      center: false
+      slide-number: c/t
+      transition: none
+      background-transition: none
+      controls: false
+      progress: false
+      menu: false
+      hash: true
+      highlight-style: none
+      code-line-numbers: false

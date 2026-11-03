@@ -22,5 +22,5 @@ Mode: the reader is here to understand something. Typography and structure are t
 - Code blocks use `--bs-font-mono` on `--bs-bg-subtle`; keep lines under ~80 characters.
 - Scholarly metadata (Highwire `citation_*` tags, `hreflang` pairs) is part of the page, not optional.
 - Print styles: hide navigation, show link URLs, keep figures with captions.
-- The Ghost theme (publishing-org/ghosttheme) uses the `folio` look today; moving it to the brand
-  default is a one-line import change plus a review of the signature components (`bs-meta`).
+- The bausk.dev Ghost theme vendors the look's tokens and fonts (`tools/sync-style.sh` in the theme)
+  and maps its own variables onto `--bs-*`, so a look upgrade is: sync, rebuild the zip, upload.

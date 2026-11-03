@@ -1,0 +1,6 @@
+#fade { opacity: 1; }
+.panel { background: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,.1); font-family: Inter, sans-serif; }
+.ok { color: var(--bs-fg); border-radius: var(--bs-radius); }
+.orcid { color: #a6ce39; } /* bausk-style-ignore tokens-only: ORCID brand mark */
+.a { box-shadow: none; border-radius: 0; }
+.b { border-radius: 0 12px 12px 0; }

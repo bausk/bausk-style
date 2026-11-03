@@ -1,0 +1,106 @@
+{
+  "fixel": [
+    {
+      "file": "ttf/fixel/FixelText-Regular.ttf",
+      "family": "Fixel Text Regular",
+      "style": "Regular",
+      "typoFamily": "Fixel Text",
+      "typoStyle": "Regular"
+    },
+    {
+      "file": "ttf/fixel/FixelText-Medium.ttf",
+      "family": "Fixel Text Medium",
+      "style": "Regular",
+      "typoFamily": "Fixel Text",
+      "typoStyle": "Medium"
+    },
+    {
+      "file": "ttf/fixel/FixelText-SemiBold.ttf",
+      "family": "Fixel Text Semi Bold",
+      "style": "Regular",
+      "typoFamily": "Fixel Text",
+      "typoStyle": "Semi Bold"
+    },
+    {
+      "file": "ttf/fixel/FixelText-Bold.ttf",
+      "family": "Fixel Text Bold",
+      "style": "Bold",
+      "typoFamily": "Fixel Text",
+      "typoStyle": "Bold"
+    },
+    {
+      "file": "ttf/fixel/FixelDisplay-Bold.ttf",
+      "family": "Fixel Display Bold",
+      "style": "Bold",
+      "typoFamily": "Fixel Display",
+      "typoStyle": "Bold"
+    },
+    {
+      "file": "ttf/fixel/FixelDisplay-ExtraBold.ttf",
+      "family": "Fixel Display Extra Bold",
+      "style": "Regular",
+      "typoFamily": "Fixel Display",
+      "typoStyle": "Extra Bold"
+    },
+    {
+      "file": "ttf/fixel/FixelDisplay-Black.ttf",
+      "family": "Fixel Display Black",
+      "style": "Regular",
+      "typoFamily": "Fixel Display",
+      "typoStyle": "Black"
+    }
+  ],
+  "arsenal": [
+    {
+      "file": "ttf/arsenal/Arsenal-Regular.ttf",
+      "family": "Arsenal",
+      "style": "Regular",
+      "typoFamily": "Arsenal",
+      "typoStyle": "Regular"
+    },
+    {
+      "file": "ttf/arsenal/Arsenal-Bold.ttf",
+      "family": "Arsenal",
+      "style": "Bold",
+      "typoFamily": "Arsenal",
+      "typoStyle": "Bold"
+    },
+    {
+      "file": "ttf/arsenal/Arsenal-Italic.ttf",
+      "family": "Arsenal",
+      "style": "Italic",
+      "typoFamily": "Arsenal",
+      "typoStyle": "Italic"
+    },
+    {
+      "file": "ttf/arsenal/Arsenal-BoldItalic.ttf",
+      "family": "Arsenal",
+      "style": "Bold Italic",
+      "typoFamily": "Arsenal",
+      "typoStyle": "Bold Italic"
+    }
+  ],
+  "plex-mono": [
+    {
+      "file": "ttf/plex-mono/IBMPlexMono-Regular.ttf",
+      "family": "IBM Plex Mono",
+      "style": "Regular",
+      "typoFamily": "IBM Plex Mono",
+      "typoStyle": "Regular"
+    },
+    {
+      "file": "ttf/plex-mono/IBMPlexMono-Medium.ttf",
+      "family": "IBM Plex Mono Medium",
+      "style": "Regular",
+      "typoFamily": "IBM Plex Mono",
+      "typoStyle": "Medium"
+    },
+    {
+      "file": "ttf/plex-mono/IBMPlexMono-Italic.ttf",
+      "family": "IBM Plex Mono",
+      "style": "Italic",
+      "typoFamily": "IBM Plex Mono",
+      "typoStyle": "Italic"
+    }
+  ]
+}

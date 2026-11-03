@@ -99,7 +99,27 @@ try {
   }
 } catch { /* not a git checkout or no tags */ }
 
-// ---- 7. dist is current -----------------------------------------------------
+// ---- 7. the guardrail checker catches the planted problems and nothing in clean code -----
+{
+  const { check } = await import('../cli/check.mjs');
+  const fx = (n) => join(ROOT, 'tests', 'fixtures', n);
+  const sloppy = check({ root: fx('sloppy') });
+  const has = (file, rule) => sloppy.some((f) => f.file.endsWith(file) && f.rule === rule);
+  for (const [file, rule] of [
+    ['Card.tsx', 'tokens-only'], ['Card.tsx', 'no-decorative-depth'], ['Card.tsx', 'radius-from-look'], ['Card.tsx', 'no-emoji-icons'],
+    ['Card.tsx', 'copy-voice'], ['Card.tsx', 'name-spelling'], ['app.css', 'tokens-only'], ['app.css', 'no-decorative-depth'],
+    ['app.css', 'radius-from-look'], ['plot.py', 'tokens-only'], ['copy.html', 'copy-voice'],
+  ]) ok(has(file, rule), `check: expected ${rule} in sloppy/${file}`);
+  ok(!sloppy.some((f) => f.file.endsWith('app.css') && f.line === 1), 'check: #fade selector was flagged as a colour');
+  ok(!sloppy.some((f) => f.file.endsWith('app.css') && f.line === 3), 'check: var(--bs-radius) was flagged');
+  ok(!sloppy.some((f) => f.file.endsWith('app.css') && f.line === 4), 'check: bausk-style-ignore was not honoured');
+  ok(!sloppy.some((f) => f.file.endsWith('app.css') && f.line === 5), 'check: box-shadow: none / border-radius: 0 were flagged');
+  ok(sloppy.some((f) => f.file.endsWith('app.css') && f.line === 6 && f.rule === 'radius-from-look'), 'check: border-radius 0 12px 12px 0 was not flagged');
+  const clean = check({ root: fx('clean') });
+  ok(clean.length === 0, `check: clean fixture has findings: ${clean.map((f) => `${f.file}:${f.line} ${f.rule}`).join(', ')}`);
+}
+
+// ---- 8. dist is current -----------------------------------------------------
 const distIndex = join(ROOT, 'dist', 'json', 'index.json');
 ok(existsSync(distIndex) && JSON.parse(readFileSync(distIndex, 'utf8')).version === all.pkg.version, 'dist/ is missing or stale: run node build/build.mjs');
 

@@ -1,6 +1,6 @@
-# bausk-style 0.1.0 · look folio · light · screen · generated, do not edit.
+# bausk-style 0.2.0 · look folio · light · screen · generated, do not edit.
 # plt.style.use("<path>/folio-light-screen.mplstyle")  or  bausk_style.use("folio", "light", "screen")
-# Fonts: matplotlib needs the TTF/OTF files installed (see guide/media/figures.md); otherwise DejaVu is used.
+# Fonts: bausk_style.use() registers the bundled TTFs; with plt.style.use() alone, install them (dist/fonts/ttf/) or DejaVu is used.
 font.family: sans-serif
 font.sans-serif: Source Sans 3, DejaVu Sans
 font.monospace: Source Code Pro, DejaVu Sans Mono

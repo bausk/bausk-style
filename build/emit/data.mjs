@@ -67,11 +67,11 @@ export function mplstyle(look, scheme, medium, meta) {
   const t = look.color[scheme];
   const m = MEDIA[medium];
   const bg = m.white && scheme === 'light' ? 'ffffff' : nohash(t.bg);
-  const ui = look.fonts.ui.family;
-  const mono = look.fonts.mono.family;
+  const ui = look.desktop?.ui ?? look.fonts.ui.family;
+  const mono = look.desktop?.mono ?? look.fonts.mono.family;
   return `# bausk-style ${meta.version} · look ${look.id} · ${scheme} · ${medium} · generated, do not edit.
 # plt.style.use("<path>/${look.id}-${scheme}-${medium}.mplstyle")  or  bausk_style.use("${look.id}", "${scheme}", "${medium}")
-# Fonts: matplotlib needs the TTF/OTF files installed (see guide/media/figures.md); otherwise DejaVu is used.
+# Fonts: bausk_style.use() registers the bundled TTFs; with plt.style.use() alone, install them (dist/fonts/ttf/) or DejaVu is used.
 font.family: sans-serif
 font.sans-serif: ${ui}, DejaVu Sans
 font.monospace: ${mono}, DejaVu Sans Mono

@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "contract": {
     "bg": "color",
     "bg-subtle": "color",
@@ -94,7 +94,7 @@
   "brands": {
     "bausk": {
       "status": "active",
-      "defaultLook": "sheet"
+      "defaultLook": "kharkiv"
     },
     "startup": {
       "status": "reserved",
@@ -110,24 +110,6 @@
       "status": "candidate",
       "since": "0.1.0",
       "palette": "kharkiv"
-    },
-    "sheet": {
-      "name": {
-        "en": "Sheet",
-        "uk": "Аркуш"
-      },
-      "status": "candidate",
-      "since": "0.1.0",
-      "palette": "graphite"
-    },
-    "survey": {
-      "name": {
-        "en": "Survey",
-        "uk": "Планшет"
-      },
-      "status": "candidate",
-      "since": "0.1.0",
-      "palette": "survey"
     },
     "folio": {
       "name": {

@@ -9,7 +9,7 @@ import json
 from functools import lru_cache
 from importlib import resources
 
-__all__ = ["looks", "default_look", "colors", "values", "use", "style_path", "figsize", "plotly_template", "version"]
+__all__ = ["looks", "default_look", "colors", "values", "use", "register_fonts", "style_path", "figsize", "plotly_template", "version"]
 
 _MM = 1 / 25.4
 
@@ -61,10 +61,24 @@ def style_path(look: str | None = None, scheme: str = "light", medium: str = "sc
     return str(resources.files(__package__).joinpath(name))
 
 
+def register_fonts(look: str | None = None) -> list[str]:
+    """Make the look's bundled TTFs available to matplotlib (no system install needed)."""
+    from matplotlib import font_manager
+
+    files = (_data()["looks"][_resolve(look)].get("desktop") or {}).get("files", [])
+    paths = [str(resources.files(__package__).joinpath(f"data/fonts/{f}")) for f in files]
+    known = {f.fname for f in font_manager.fontManager.ttflist}
+    for p in paths:
+        if p not in known:
+            font_manager.fontManager.addfont(p)
+    return paths
+
+
 def use(look: str | None = None, scheme: str = "light", medium: str = "screen") -> None:
     """Apply the look to matplotlib. medium: paper (8 pt, white), screen, slide (1920×1080 decks)."""
     import matplotlib.pyplot as plt
 
+    register_fonts(look)
     plt.style.use(style_path(look, scheme, medium))
 
 

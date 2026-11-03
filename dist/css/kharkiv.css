@@ -1,4 +1,4 @@
-/* bausk-style 0.1.0 · look "kharkiv" (candidate) · generated, do not edit.
+/* bausk-style 0.2.0 · look "kharkiv" (candidate) · generated, do not edit.
    Source: tokens/looks/kharkiv/, components/base.css. Docs: guide/README.md */
 @layer bs.tokens, bs.base, bs.components, bs.signature;
 
@@ -622,6 +622,8 @@
   /* Full colour, not opacity: dimmed text on an accent fill falls below 4.5:1. Hierarchy comes from size. */
   .bs-slide--section .bs-slide__lead, .bs-slide--section .bs-slide__foot { color: inherit; }
 
+  .bs-video--section { background: var(--bs-bg-inverse); color: var(--bs-fg-inverse); }
+  .bs-video--section .bs-titlecard__sub { color: inherit; }
   .bs-titlecard { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: calc(1920 * var(--bs-video-title-safe) * 2 * var(--px)); }
   .bs-titlecard__title { font-size: calc(96 * var(--px)); max-width: 75%; }
   .bs-titlecard__sub { margin-top: calc(24 * var(--px)); font-family: var(--bs-font-ui); font-stretch: var(--bs-ui-stretch); font-size: calc(36 * var(--px)); color: var(--bs-fg-muted); }
@@ -665,7 +667,9 @@
   .bs-entry { border-bottom-width: var(--bs-line-w); border-bottom-color: var(--bs-fg); }
   .bs-entry__title { font-family: var(--bs-font-display); font-weight: 800; font-size: var(--bs-size-xl); letter-spacing: var(--bs-tracking-display); }
 
-  .bs-article__title { font-size: var(--bs-size-4xl); text-transform: uppercase; }
+  /* Article titles are long: sentence case, display weight. Capitals are for short titles only
+     (section heads, slides, covers, thumbnails). */
+  .bs-article__title { font-size: var(--bs-size-3xl); }
   .bs-meta { border-top: 0.5rem solid var(--bs-fg); padding-top: var(--bs-space-4); max-width: var(--bs-measure-text); }
   .bs-meta dt { color: var(--bs-accent); }
 
@@ -684,6 +688,10 @@
   .bs-slide--section::before { background: var(--bs-fg); }
 
   .bs-titlecard__title { text-transform: uppercase; font-size: calc(132 * var(--px)); }
+  .bs-video::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: calc(40 * 100cqw / 1920); background: var(--bs-accent); z-index: 1; }
+  .bs-video:has(> .bs-lowerthird)::before, .bs-video:has(> .sp-frame-art)::before { display: none; }
+  .bs-video--section { background: var(--bs-accent); color: var(--bs-on-accent); }
+  .bs-video--section::before { background: var(--bs-fg); }
   .bs-lowerthird { background: var(--bs-fg); color: var(--bs-bg); border-left: calc(18 * var(--px)) solid var(--bs-accent); }
   .bs-lowerthird__role { color: inherit; }
   .bs-thumb__words { text-transform: uppercase; }

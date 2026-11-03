@@ -38,9 +38,9 @@ and a pointer block in `AGENTS.md`/`CLAUDE.md`. With `--media slides` it also co
 ## 3. Follow or freeze the look
 
 `"look": "default"` follows the brand's default look: when a release moves the brand to a new look,
-`npm update` + `npx bausk-style sync` brings it in. `"look": "sheet"` freezes the project on that
+`npm update` + `npx bausk-style sync` brings it in. `"look": "kharkiv"` freezes the project on that
 look for as long as the major version lasts. Import paths match: `css/bausk.css` follows,
-`css/sheet.css` freezes.
+`css/kharkiv.css` freezes.
 
 ## 4. Per stack
 

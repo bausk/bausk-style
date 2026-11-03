@@ -3,10 +3,12 @@
 #   1. ./node_modules/bausk-style (walking up from the current directory)
 #   2. the version in bausk-style.json, from a cached checkout of tag v<version>
 #   3. the development checkout: $BAUSK_STYLE_HOME (default ~/bausk-style)
-# Set BAUSK_STYLE_REPO to a git URL to fetch tags from somewhere other than the dev checkout.
+# Tags come from the dev checkout if present, else github.com/bausk/bausk-style; BAUSK_STYLE_REPO overrides.
 set -e
 home="${BAUSK_STYLE_HOME:-$HOME/bausk-style}"
-repo="${BAUSK_STYLE_REPO:-$home}"
+if [ -n "$BAUSK_STYLE_REPO" ]; then repo="$BAUSK_STYLE_REPO"
+elif [ -d "$home/.git" ]; then repo="$home"
+else repo="https://github.com/bausk/bausk-style.git"; fi
 dir=$(pwd)
 config=""
 while :; do

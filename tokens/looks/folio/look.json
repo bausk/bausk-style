@@ -174,5 +174,20 @@
       "singleColumnMm": 85,
       "doubleColumnMm": 175
     }
+  },
+  "desktop": {
+    "$comment": "Legacy: desktop TTFs are not vendored; install Source Serif 4 / Source Sans 3 / Source Code Pro if needed.",
+    "text": "Source Serif 4",
+    "ui": "Source Sans 3",
+    "display": "Source Serif 4",
+    "mono": "Source Code Pro",
+    "office": {
+      "major": "Source Serif 4",
+      "minor": "Source Serif 4",
+      "ui": "Source Sans 3",
+      "uiBold": "Source Sans 3",
+      "mono": "Source Code Pro"
+    },
+    "files": []
   }
 }

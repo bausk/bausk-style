@@ -1,0 +1,262 @@
+/* bausk-style 0.2.0 · look "folio" · fonts and tokens for the deck · generated, do not edit. */
+@layer bs.tokens;
+@font-face {
+  font-family: "BS Source Serif 4";
+  font-style: normal; font-weight: 200 900; font-display: swap;
+  src: url("fonts/source-serif-4/source-serif-4-cyrillic-ext-opsz-normal.woff2") format("woff2-variations"), url("fonts/source-serif-4/source-serif-4-cyrillic-ext-opsz-normal.woff2") format("woff2");
+  unicode-range: U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "BS Source Serif 4";
+  font-style: normal; font-weight: 200 900; font-display: swap;
+  src: url("fonts/source-serif-4/source-serif-4-cyrillic-opsz-normal.woff2") format("woff2-variations"), url("fonts/source-serif-4/source-serif-4-cyrillic-opsz-normal.woff2") format("woff2");
+  unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;
+}
+@font-face {
+  font-family: "BS Source Serif 4";
+  font-style: normal; font-weight: 200 900; font-display: swap;
+  src: url("fonts/source-serif-4/source-serif-4-latin-ext-opsz-normal.woff2") format("woff2-variations"), url("fonts/source-serif-4/source-serif-4-latin-ext-opsz-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: "BS Source Serif 4";
+  font-style: normal; font-weight: 200 900; font-display: swap;
+  src: url("fonts/source-serif-4/source-serif-4-latin-opsz-normal.woff2") format("woff2-variations"), url("fonts/source-serif-4/source-serif-4-latin-opsz-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: "BS Source Serif 4";
+  font-style: italic; font-weight: 200 900; font-display: swap;
+  src: url("fonts/source-serif-4/source-serif-4-cyrillic-ext-opsz-italic.woff2") format("woff2-variations"), url("fonts/source-serif-4/source-serif-4-cyrillic-ext-opsz-italic.woff2") format("woff2");
+  unicode-range: U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "BS Source Serif 4";
+  font-style: italic; font-weight: 200 900; font-display: swap;
+  src: url("fonts/source-serif-4/source-serif-4-cyrillic-opsz-italic.woff2") format("woff2-variations"), url("fonts/source-serif-4/source-serif-4-cyrillic-opsz-italic.woff2") format("woff2");
+  unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;
+}
+@font-face {
+  font-family: "BS Source Serif 4";
+  font-style: italic; font-weight: 200 900; font-display: swap;
+  src: url("fonts/source-serif-4/source-serif-4-latin-ext-opsz-italic.woff2") format("woff2-variations"), url("fonts/source-serif-4/source-serif-4-latin-ext-opsz-italic.woff2") format("woff2");
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: "BS Source Serif 4";
+  font-style: italic; font-weight: 200 900; font-display: swap;
+  src: url("fonts/source-serif-4/source-serif-4-latin-opsz-italic.woff2") format("woff2-variations"), url("fonts/source-serif-4/source-serif-4-latin-opsz-italic.woff2") format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: "BS Source Sans 3";
+  font-style: normal; font-weight: 200 900; font-display: swap;
+  src: url("fonts/source-sans-3/source-sans-3-cyrillic-ext-wght-normal.woff2") format("woff2-variations"), url("fonts/source-sans-3/source-sans-3-cyrillic-ext-wght-normal.woff2") format("woff2");
+  unicode-range: U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "BS Source Sans 3";
+  font-style: normal; font-weight: 200 900; font-display: swap;
+  src: url("fonts/source-sans-3/source-sans-3-cyrillic-wght-normal.woff2") format("woff2-variations"), url("fonts/source-sans-3/source-sans-3-cyrillic-wght-normal.woff2") format("woff2");
+  unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;
+}
+@font-face {
+  font-family: "BS Source Sans 3";
+  font-style: normal; font-weight: 200 900; font-display: swap;
+  src: url("fonts/source-sans-3/source-sans-3-latin-ext-wght-normal.woff2") format("woff2-variations"), url("fonts/source-sans-3/source-sans-3-latin-ext-wght-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: "BS Source Sans 3";
+  font-style: normal; font-weight: 200 900; font-display: swap;
+  src: url("fonts/source-sans-3/source-sans-3-latin-wght-normal.woff2") format("woff2-variations"), url("fonts/source-sans-3/source-sans-3-latin-wght-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: "BS Source Code Pro";
+  font-style: normal; font-weight: 200 900; font-display: swap;
+  src: url("fonts/source-code-pro/source-code-pro-cyrillic-ext-wght-normal.woff2") format("woff2-variations"), url("fonts/source-code-pro/source-code-pro-cyrillic-ext-wght-normal.woff2") format("woff2");
+  unicode-range: U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "BS Source Code Pro";
+  font-style: normal; font-weight: 200 900; font-display: swap;
+  src: url("fonts/source-code-pro/source-code-pro-cyrillic-wght-normal.woff2") format("woff2-variations"), url("fonts/source-code-pro/source-code-pro-cyrillic-wght-normal.woff2") format("woff2");
+  unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;
+}
+@font-face {
+  font-family: "BS Source Code Pro";
+  font-style: normal; font-weight: 200 900; font-display: swap;
+  src: url("fonts/source-code-pro/source-code-pro-latin-ext-wght-normal.woff2") format("woff2-variations"), url("fonts/source-code-pro/source-code-pro-latin-ext-wght-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: "BS Source Code Pro";
+  font-style: normal; font-weight: 200 900; font-display: swap;
+  src: url("fonts/source-code-pro/source-code-pro-latin-wght-normal.woff2") format("woff2-variations"), url("fonts/source-code-pro/source-code-pro-latin-wght-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@layer bs.tokens {
+  :root, [data-bs-scheme="light"] {
+  color-scheme: light;
+  --bs-bg: #faf9f6;
+  --bs-bg-subtle: #f1efe9;
+  --bs-bg-inverse: #1c1b19;
+  --bs-fg: #1c1b19;
+  --bs-fg-muted: #46433d;
+  --bs-fg-subtle: #6a665e;
+  --bs-fg-inverse: #faf9f6;
+  --bs-line: #d9d5cc;
+  --bs-line-strong: #6a665e;
+  --bs-accent: #8f2a1a;
+  --bs-accent-strong: #6c1f12;
+  --bs-accent-subtle: #f3e2dc;
+  --bs-on-accent: #faf9f6;
+  --bs-focus: #8f2a1a;
+  --bs-selection: #f3e2dc;
+  --bs-positive: #5b6b2e;
+  --bs-negative: #8f2a1a;
+  --bs-caution: #9a6a12;
+  --bs-viz-1: #1c1b19;
+  --bs-viz-2: #8f2a1a;
+  --bs-viz-3: #1d5a57;
+  --bs-viz-4: #9a6a12;
+  --bs-viz-5: #1f4a78;
+  --bs-viz-6: #5b6b2e;
+  --bs-viz-up: #1d5a57;
+  --bs-viz-down: #8f2a1a;
+  --bs-viz-muted: #a39e93;
+  --bs-viz-grid: #d9d5cc;
+  --bs-viz-axis: #6a665e;
+  --bs-viz-label: #6a665e;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-bs-scheme="light"]) {
+    color-scheme: dark;
+    --bs-bg: #1a1917;
+    --bs-bg-subtle: #242320;
+    --bs-bg-inverse: #ece9e2;
+    --bs-fg: #ece9e2;
+    --bs-fg-muted: #c4bfb4;
+    --bs-fg-subtle: #9c968a;
+    --bs-fg-inverse: #1a1917;
+    --bs-line: #3a3833;
+    --bs-line-strong: #9c968a;
+    --bs-accent: #e0846f;
+    --bs-accent-strong: #eba08f;
+    --bs-accent-subtle: #3d2019;
+    --bs-on-accent: #1a1917;
+    --bs-focus: #e0846f;
+    --bs-selection: #3d2019;
+    --bs-positive: #a5b86a;
+    --bs-negative: #e0846f;
+    --bs-caution: #d9a548;
+    --bs-viz-1: #ece9e2;
+    --bs-viz-2: #e0846f;
+    --bs-viz-3: #6fb5ae;
+    --bs-viz-4: #d9a548;
+    --bs-viz-5: #7fa6d6;
+    --bs-viz-6: #a5b86a;
+    --bs-viz-up: #6fb5ae;
+    --bs-viz-down: #e0846f;
+    --bs-viz-muted: #6f6a60;
+    --bs-viz-grid: #3a3833;
+    --bs-viz-axis: #9c968a;
+    --bs-viz-label: #9c968a;
+    }
+  }
+  [data-bs-scheme="dark"] {
+  color-scheme: dark;
+  --bs-bg: #1a1917;
+  --bs-bg-subtle: #242320;
+  --bs-bg-inverse: #ece9e2;
+  --bs-fg: #ece9e2;
+  --bs-fg-muted: #c4bfb4;
+  --bs-fg-subtle: #9c968a;
+  --bs-fg-inverse: #1a1917;
+  --bs-line: #3a3833;
+  --bs-line-strong: #9c968a;
+  --bs-accent: #e0846f;
+  --bs-accent-strong: #eba08f;
+  --bs-accent-subtle: #3d2019;
+  --bs-on-accent: #1a1917;
+  --bs-focus: #e0846f;
+  --bs-selection: #3d2019;
+  --bs-positive: #a5b86a;
+  --bs-negative: #e0846f;
+  --bs-caution: #d9a548;
+  --bs-viz-1: #ece9e2;
+  --bs-viz-2: #e0846f;
+  --bs-viz-3: #6fb5ae;
+  --bs-viz-4: #d9a548;
+  --bs-viz-5: #7fa6d6;
+  --bs-viz-6: #a5b86a;
+  --bs-viz-up: #6fb5ae;
+  --bs-viz-down: #e0846f;
+  --bs-viz-muted: #6f6a60;
+  --bs-viz-grid: #3a3833;
+  --bs-viz-axis: #9c968a;
+  --bs-viz-label: #9c968a;
+  }
+  :root {
+  --bs-size-2xs: 0.75rem;
+  --bs-size-xs: 0.8125rem;
+  --bs-size-sm: 0.875rem;
+  --bs-size-md: 0.9375rem;
+  --bs-size-text: 1.1875rem;
+  --bs-size-lg: 1.375rem;
+  --bs-size-xl: 1.625rem;
+  --bs-size-2xl: 2.125rem;
+  --bs-size-3xl: 2.75rem;
+  --bs-size-4xl: 3.5rem;
+  --bs-leading-text: 1.62;
+  --bs-leading-ui: 1.45;
+  --bs-leading-tight: 1.2;
+  --bs-weight-regular: 400;
+  --bs-weight-medium: 600;
+  --bs-weight-bold: 700;
+  --bs-weight-display: 600;
+  --bs-tracking-display: -0.005em;
+  --bs-tracking-label: 0;
+  --bs-label-case: none;
+  --bs-label-stretch: 100%;
+  --bs-label-weight: 600;
+  --bs-display-stretch: 100%;
+  --bs-ui-stretch: 100%;
+  --bs-space-1: 0.125rem;
+  --bs-space-2: 0.25rem;
+  --bs-space-3: 0.5rem;
+  --bs-space-4: 0.75rem;
+  --bs-space-5: 1rem;
+  --bs-space-6: 1.5rem;
+  --bs-space-7: 2.5rem;
+  --bs-space-8: 4rem;
+  --bs-measure-text: 41rem;
+  --bs-measure-wide: 62rem;
+  --bs-measure-page: 74rem;
+  --bs-gutter: clamp(1.25rem, 5vw, 3rem);
+  --bs-row-h: 2rem;
+  --bs-control-h: 2.25rem;
+  --bs-radius: 0;
+  --bs-radius-control: 0;
+  --bs-line-w: 1px;
+  --bs-line-w-strong: 2px;
+  --bs-duration-fast: 120ms;
+  --bs-duration-base: 200ms;
+  --bs-duration-slow: 320ms;
+  --bs-ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --bs-ease-in-out: cubic-bezier(0.6, 0, 0.3, 1);
+  --bs-slide-margin: 112;
+  --bs-slide-title: 84;
+  --bs-slide-lead: 44;
+  --bs-slide-body: 40;
+  --bs-slide-small: 28;
+  --bs-slide-foot: 24;
+  --bs-video-action-safe: 0.035;
+  --bs-video-title-safe: 0.05;
+  --bs-font-text: "BS Source Serif 4", "Source Serif 4", Georgia, "Times New Roman", serif;
+  --bs-font-ui: "BS Source Sans 3", "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --bs-font-display: "BS Source Serif 4", "Source Serif 4", Georgia, serif;
+  --bs-font-mono: "BS Source Code Pro", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  }
+}

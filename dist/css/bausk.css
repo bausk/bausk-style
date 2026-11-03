@@ -1,56 +1,109 @@
-/* Brand "bausk" → look "sheet". This file follows the brand's default look and changes when a release moves it.
-   To freeze a project on this look, import css/sheet.css instead. */
-/* bausk-style 0.1.0 · look "sheet" (candidate) · generated, do not edit.
-   Source: tokens/looks/sheet/, components/base.css. Docs: guide/README.md */
+/* Brand "bausk" → look "kharkiv". This file follows the brand's default look and changes when a release moves it.
+   To freeze a project on this look, import css/kharkiv.css instead. */
+/* bausk-style 0.2.0 · look "kharkiv" (candidate) · generated, do not edit.
+   Source: tokens/looks/kharkiv/, components/base.css. Docs: guide/README.md */
 @layer bs.tokens, bs.base, bs.components, bs.signature;
 
 @font-face {
-  font-family: "BS IBM Plex Sans";
-  font-style: normal; font-weight: 100 700; font-stretch: 75% 100%; font-display: swap;
-  src: url("../fonts/plex-sans/ibm-plex-sans-cyrillic-ext-standard-normal.woff2") format("woff2-variations"), url("../fonts/plex-sans/ibm-plex-sans-cyrillic-ext-standard-normal.woff2") format("woff2");
+  font-family: "BS Arsenal";
+  font-style: normal; font-weight: 400; font-display: swap;
+  src: url("../fonts/arsenal/arsenal-cyrillic-ext-400-normal.woff2") format("woff2"), url("../fonts/arsenal/arsenal-cyrillic-ext-400-normal.woff2") format("woff2");
   unicode-range: U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;
 }
 @font-face {
-  font-family: "BS IBM Plex Sans";
-  font-style: normal; font-weight: 100 700; font-stretch: 75% 100%; font-display: swap;
-  src: url("../fonts/plex-sans/ibm-plex-sans-cyrillic-standard-normal.woff2") format("woff2-variations"), url("../fonts/plex-sans/ibm-plex-sans-cyrillic-standard-normal.woff2") format("woff2");
+  font-family: "BS Arsenal";
+  font-style: normal; font-weight: 400; font-display: swap;
+  src: url("../fonts/arsenal/arsenal-cyrillic-400-normal.woff2") format("woff2"), url("../fonts/arsenal/arsenal-cyrillic-400-normal.woff2") format("woff2");
   unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;
 }
 @font-face {
-  font-family: "BS IBM Plex Sans";
-  font-style: normal; font-weight: 100 700; font-stretch: 75% 100%; font-display: swap;
-  src: url("../fonts/plex-sans/ibm-plex-sans-latin-ext-standard-normal.woff2") format("woff2-variations"), url("../fonts/plex-sans/ibm-plex-sans-latin-ext-standard-normal.woff2") format("woff2");
+  font-family: "BS Arsenal";
+  font-style: normal; font-weight: 400; font-display: swap;
+  src: url("../fonts/arsenal/arsenal-latin-ext-400-normal.woff2") format("woff2"), url("../fonts/arsenal/arsenal-latin-ext-400-normal.woff2") format("woff2");
   unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
 }
 @font-face {
-  font-family: "BS IBM Plex Sans";
-  font-style: normal; font-weight: 100 700; font-stretch: 75% 100%; font-display: swap;
-  src: url("../fonts/plex-sans/ibm-plex-sans-latin-standard-normal.woff2") format("woff2-variations"), url("../fonts/plex-sans/ibm-plex-sans-latin-standard-normal.woff2") format("woff2");
+  font-family: "BS Arsenal";
+  font-style: normal; font-weight: 400; font-display: swap;
+  src: url("../fonts/arsenal/arsenal-latin-400-normal.woff2") format("woff2"), url("../fonts/arsenal/arsenal-latin-400-normal.woff2") format("woff2");
   unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
 }
 @font-face {
-  font-family: "BS IBM Plex Sans";
-  font-style: italic; font-weight: 100 700; font-stretch: 75% 100%; font-display: swap;
-  src: url("../fonts/plex-sans/ibm-plex-sans-cyrillic-ext-standard-italic.woff2") format("woff2-variations"), url("../fonts/plex-sans/ibm-plex-sans-cyrillic-ext-standard-italic.woff2") format("woff2");
+  font-family: "BS Arsenal";
+  font-style: normal; font-weight: 700; font-display: swap;
+  src: url("../fonts/arsenal/arsenal-cyrillic-ext-700-normal.woff2") format("woff2"), url("../fonts/arsenal/arsenal-cyrillic-ext-700-normal.woff2") format("woff2");
   unicode-range: U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;
 }
 @font-face {
-  font-family: "BS IBM Plex Sans";
-  font-style: italic; font-weight: 100 700; font-stretch: 75% 100%; font-display: swap;
-  src: url("../fonts/plex-sans/ibm-plex-sans-cyrillic-standard-italic.woff2") format("woff2-variations"), url("../fonts/plex-sans/ibm-plex-sans-cyrillic-standard-italic.woff2") format("woff2");
+  font-family: "BS Arsenal";
+  font-style: normal; font-weight: 700; font-display: swap;
+  src: url("../fonts/arsenal/arsenal-cyrillic-700-normal.woff2") format("woff2"), url("../fonts/arsenal/arsenal-cyrillic-700-normal.woff2") format("woff2");
   unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;
 }
 @font-face {
-  font-family: "BS IBM Plex Sans";
-  font-style: italic; font-weight: 100 700; font-stretch: 75% 100%; font-display: swap;
-  src: url("../fonts/plex-sans/ibm-plex-sans-latin-ext-standard-italic.woff2") format("woff2-variations"), url("../fonts/plex-sans/ibm-plex-sans-latin-ext-standard-italic.woff2") format("woff2");
+  font-family: "BS Arsenal";
+  font-style: normal; font-weight: 700; font-display: swap;
+  src: url("../fonts/arsenal/arsenal-latin-ext-700-normal.woff2") format("woff2"), url("../fonts/arsenal/arsenal-latin-ext-700-normal.woff2") format("woff2");
   unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
 }
 @font-face {
-  font-family: "BS IBM Plex Sans";
-  font-style: italic; font-weight: 100 700; font-stretch: 75% 100%; font-display: swap;
-  src: url("../fonts/plex-sans/ibm-plex-sans-latin-standard-italic.woff2") format("woff2-variations"), url("../fonts/plex-sans/ibm-plex-sans-latin-standard-italic.woff2") format("woff2");
+  font-family: "BS Arsenal";
+  font-style: normal; font-weight: 700; font-display: swap;
+  src: url("../fonts/arsenal/arsenal-latin-700-normal.woff2") format("woff2"), url("../fonts/arsenal/arsenal-latin-700-normal.woff2") format("woff2");
   unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: "BS Arsenal";
+  font-style: italic; font-weight: 400; font-display: swap;
+  src: url("../fonts/arsenal/arsenal-cyrillic-ext-400-italic.woff2") format("woff2"), url("../fonts/arsenal/arsenal-cyrillic-ext-400-italic.woff2") format("woff2");
+  unicode-range: U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "BS Arsenal";
+  font-style: italic; font-weight: 400; font-display: swap;
+  src: url("../fonts/arsenal/arsenal-cyrillic-400-italic.woff2") format("woff2"), url("../fonts/arsenal/arsenal-cyrillic-400-italic.woff2") format("woff2");
+  unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;
+}
+@font-face {
+  font-family: "BS Arsenal";
+  font-style: italic; font-weight: 400; font-display: swap;
+  src: url("../fonts/arsenal/arsenal-latin-ext-400-italic.woff2") format("woff2"), url("../fonts/arsenal/arsenal-latin-ext-400-italic.woff2") format("woff2");
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: "BS Arsenal";
+  font-style: italic; font-weight: 400; font-display: swap;
+  src: url("../fonts/arsenal/arsenal-latin-400-italic.woff2") format("woff2"), url("../fonts/arsenal/arsenal-latin-400-italic.woff2") format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: "BS Arsenal";
+  font-style: italic; font-weight: 700; font-display: swap;
+  src: url("../fonts/arsenal/arsenal-cyrillic-ext-700-italic.woff2") format("woff2"), url("../fonts/arsenal/arsenal-cyrillic-ext-700-italic.woff2") format("woff2");
+  unicode-range: U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "BS Arsenal";
+  font-style: italic; font-weight: 700; font-display: swap;
+  src: url("../fonts/arsenal/arsenal-cyrillic-700-italic.woff2") format("woff2"), url("../fonts/arsenal/arsenal-cyrillic-700-italic.woff2") format("woff2");
+  unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;
+}
+@font-face {
+  font-family: "BS Arsenal";
+  font-style: italic; font-weight: 700; font-display: swap;
+  src: url("../fonts/arsenal/arsenal-latin-ext-700-italic.woff2") format("woff2"), url("../fonts/arsenal/arsenal-latin-ext-700-italic.woff2") format("woff2");
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: "BS Arsenal";
+  font-style: italic; font-weight: 700; font-display: swap;
+  src: url("../fonts/arsenal/arsenal-latin-700-italic.woff2") format("woff2"), url("../fonts/arsenal/arsenal-latin-700-italic.woff2") format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: "BS Fixel";
+  font-style: normal; font-weight: 100 900; font-stretch: 87.5% 100%; font-display: swap;
+  src: url("../fonts/fixel/fixel-variable.woff2") format("woff2-variations"), url("../fonts/fixel/fixel-variable.woff2") format("woff2");
 }
 @font-face {
   font-family: "BS IBM Plex Mono";
@@ -152,130 +205,130 @@
 @layer bs.tokens {
   :root, [data-bs-scheme="light"] {
   color-scheme: light;
-  --bs-bg: #f4f7f8;
-  --bs-bg-subtle: #e9eeef;
-  --bs-bg-inverse: #1b2025;
-  --bs-fg: #1b2025;
-  --bs-fg-muted: #43484e;
-  --bs-fg-subtle: #5f646a;
-  --bs-fg-inverse: #f4f7f8;
-  --bs-line: #caced1;
-  --bs-line-strong: #5f646a;
-  --bs-accent: #c52f15;
-  --bs-accent-strong: #a11d05;
-  --bs-accent-subtle: #fee0d9;
-  --bs-on-accent: #f4f7f8;
-  --bs-focus: #c52f15;
-  --bs-selection: #fee0d9;
-  --bs-positive: #246e3a;
-  --bs-negative: #c52f15;
-  --bs-caution: #9d6300;
-  --bs-viz-1: #1b2025;
-  --bs-viz-2: #c52f15;
-  --bs-viz-3: #1762b6;
-  --bs-viz-4: #3d8e53;
-  --bs-viz-5: #b6770b;
-  --bs-viz-6: #5288a2;
-  --bs-viz-up: #1762b6;
-  --bs-viz-down: #c52f15;
-  --bs-viz-muted: #93999e;
-  --bs-viz-grid: #caced1;
-  --bs-viz-axis: #5f646a;
-  --bs-viz-label: #5f646a;
+  --bs-bg: #f1f0ee;
+  --bs-bg-subtle: #e4e3e0;
+  --bs-bg-inverse: #100f0e;
+  --bs-fg: #100f0e;
+  --bs-fg-muted: #3f3d3b;
+  --bs-fg-subtle: #5d5a59;
+  --bs-fg-inverse: #f1f0ee;
+  --bs-line: #bfbebb;
+  --bs-line-strong: #100f0e;
+  --bs-accent: #c91114;
+  --bs-accent-strong: #a30008;
+  --bs-accent-subtle: #fbd8d3;
+  --bs-on-accent: #f1f0ee;
+  --bs-focus: #c91114;
+  --bs-selection: #fbd8d3;
+  --bs-positive: #4a6e42;
+  --bs-negative: #c91114;
+  --bs-caution: #8d5e00;
+  --bs-viz-1: #100f0e;
+  --bs-viz-2: #c91114;
+  --bs-viz-3: #7d7a77;
+  --bs-viz-4: #23588a;
+  --bs-viz-5: #ac7d1b;
+  --bs-viz-6: #4a6e42;
+  --bs-viz-up: #100f0e;
+  --bs-viz-down: #c91114;
+  --bs-viz-muted: #999895;
+  --bs-viz-grid: #bfbebb;
+  --bs-viz-axis: #5d5a59;
+  --bs-viz-label: #5d5a59;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-bs-scheme="light"]) {
     color-scheme: dark;
-    --bs-bg: #15191e;
-    --bs-bg-subtle: #1d2228;
-    --bs-bg-inverse: #e4e9eb;
-    --bs-fg: #e4e9eb;
-    --bs-fg-muted: #b3b8bc;
-    --bs-fg-subtle: #93999e;
-    --bs-fg-inverse: #15191e;
-    --bs-line: #34383e;
-    --bs-line-strong: #93999e;
-    --bs-accent: #f07456;
-    --bs-accent-strong: #fe9979;
-    --bs-accent-subtle: #47211a;
-    --bs-on-accent: #15191e;
-    --bs-focus: #f07456;
-    --bs-selection: #47211a;
-    --bs-positive: #6fc884;
-    --bs-negative: #f07456;
+    --bs-bg: #100f0e;
+    --bs-bg-subtle: #1c1a19;
+    --bs-bg-inverse: #f1f0ee;
+    --bs-fg: #f1f0ee;
+    --bs-fg-muted: #bfbebb;
+    --bs-fg-subtle: #999895;
+    --bs-fg-inverse: #100f0e;
+    --bs-line: #373534;
+    --bs-line-strong: #bfbebb;
+    --bs-accent: #ed4b40;
+    --bs-accent-strong: #fd7562;
+    --bs-accent-subtle: #491511;
+    --bs-on-accent: #100f0e;
+    --bs-focus: #ed4b40;
+    --bs-selection: #491511;
+    --bs-positive: #7aa671;
+    --bs-negative: #ed4b40;
     --bs-caution: #f0ba59;
-    --bs-viz-1: #e4e9eb;
-    --bs-viz-2: #f07456;
-    --bs-viz-3: #549de5;
-    --bs-viz-4: #6fc884;
-    --bs-viz-5: #f7c15f;
-    --bs-viz-6: #57768c;
-    --bs-viz-up: #549de5;
-    --bs-viz-down: #f07456;
-    --bs-viz-muted: #6d7277;
-    --bs-viz-grid: #34383e;
-    --bs-viz-axis: #93999e;
-    --bs-viz-label: #93999e;
+    --bs-viz-1: #f1f0ee;
+    --bs-viz-2: #ed4b40;
+    --bs-viz-3: #7d7a77;
+    --bs-viz-4: #67a3e0;
+    --bs-viz-5: #f0ba59;
+    --bs-viz-6: #7aa671;
+    --bs-viz-up: #f1f0ee;
+    --bs-viz-down: #ed4b40;
+    --bs-viz-muted: #5d5a59;
+    --bs-viz-grid: #373534;
+    --bs-viz-axis: #999895;
+    --bs-viz-label: #999895;
     }
   }
   [data-bs-scheme="dark"] {
   color-scheme: dark;
-  --bs-bg: #15191e;
-  --bs-bg-subtle: #1d2228;
-  --bs-bg-inverse: #e4e9eb;
-  --bs-fg: #e4e9eb;
-  --bs-fg-muted: #b3b8bc;
-  --bs-fg-subtle: #93999e;
-  --bs-fg-inverse: #15191e;
-  --bs-line: #34383e;
-  --bs-line-strong: #93999e;
-  --bs-accent: #f07456;
-  --bs-accent-strong: #fe9979;
-  --bs-accent-subtle: #47211a;
-  --bs-on-accent: #15191e;
-  --bs-focus: #f07456;
-  --bs-selection: #47211a;
-  --bs-positive: #6fc884;
-  --bs-negative: #f07456;
+  --bs-bg: #100f0e;
+  --bs-bg-subtle: #1c1a19;
+  --bs-bg-inverse: #f1f0ee;
+  --bs-fg: #f1f0ee;
+  --bs-fg-muted: #bfbebb;
+  --bs-fg-subtle: #999895;
+  --bs-fg-inverse: #100f0e;
+  --bs-line: #373534;
+  --bs-line-strong: #bfbebb;
+  --bs-accent: #ed4b40;
+  --bs-accent-strong: #fd7562;
+  --bs-accent-subtle: #491511;
+  --bs-on-accent: #100f0e;
+  --bs-focus: #ed4b40;
+  --bs-selection: #491511;
+  --bs-positive: #7aa671;
+  --bs-negative: #ed4b40;
   --bs-caution: #f0ba59;
-  --bs-viz-1: #e4e9eb;
-  --bs-viz-2: #f07456;
-  --bs-viz-3: #549de5;
-  --bs-viz-4: #6fc884;
-  --bs-viz-5: #f7c15f;
-  --bs-viz-6: #57768c;
-  --bs-viz-up: #549de5;
-  --bs-viz-down: #f07456;
-  --bs-viz-muted: #6d7277;
-  --bs-viz-grid: #34383e;
-  --bs-viz-axis: #93999e;
-  --bs-viz-label: #93999e;
+  --bs-viz-1: #f1f0ee;
+  --bs-viz-2: #ed4b40;
+  --bs-viz-3: #7d7a77;
+  --bs-viz-4: #67a3e0;
+  --bs-viz-5: #f0ba59;
+  --bs-viz-6: #7aa671;
+  --bs-viz-up: #f1f0ee;
+  --bs-viz-down: #ed4b40;
+  --bs-viz-muted: #5d5a59;
+  --bs-viz-grid: #373534;
+  --bs-viz-axis: #999895;
+  --bs-viz-label: #999895;
   }
   :root {
-  --bs-size-2xs: 0.6875rem;
-  --bs-size-xs: 0.75rem;
-  --bs-size-sm: 0.8125rem;
-  --bs-size-md: 0.9375rem;
-  --bs-size-text: 1.0625rem;
-  --bs-size-lg: 1.25rem;
-  --bs-size-xl: 1.5rem;
-  --bs-size-2xl: 2rem;
-  --bs-size-3xl: 2.75rem;
-  --bs-size-4xl: 4rem;
-  --bs-leading-text: 1.6;
-  --bs-leading-ui: 1.4;
-  --bs-leading-tight: 1.15;
+  --bs-size-2xs: 0.75rem;
+  --bs-size-xs: 0.8125rem;
+  --bs-size-sm: 0.875rem;
+  --bs-size-md: 1rem;
+  --bs-size-text: 1.1875rem;
+  --bs-size-lg: 1.375rem;
+  --bs-size-xl: 1.75rem;
+  --bs-size-2xl: 2.5rem;
+  --bs-size-3xl: 3.5rem;
+  --bs-size-4xl: 5.5rem;
+  --bs-leading-text: 1.55;
+  --bs-leading-ui: 1.35;
+  --bs-leading-tight: 0.98;
   --bs-weight-regular: 400;
   --bs-weight-medium: 500;
-  --bs-weight-bold: 600;
-  --bs-weight-display: 600;
-  --bs-tracking-display: -0.01em;
-  --bs-tracking-label: 0.06em;
+  --bs-weight-bold: 700;
+  --bs-weight-display: 900;
+  --bs-tracking-display: -0.02em;
+  --bs-tracking-label: 0.04em;
   --bs-label-case: uppercase;
-  --bs-label-stretch: 85%;
-  --bs-label-weight: 500;
-  --bs-display-stretch: 92%;
-  --bs-ui-stretch: 100%;
+  --bs-label-stretch: 87.5%;
+  --bs-label-weight: 700;
+  --bs-display-stretch: 100%;
+  --bs-ui-stretch: 87.5%;
   --bs-space-1: 0.125rem;
   --bs-space-2: 0.25rem;
   --bs-space-3: 0.5rem;
@@ -283,33 +336,33 @@
   --bs-space-5: 1rem;
   --bs-space-6: 1.5rem;
   --bs-space-7: 2.5rem;
-  --bs-space-8: 4rem;
-  --bs-measure-text: 40rem;
+  --bs-space-8: 4.5rem;
+  --bs-measure-text: 38rem;
   --bs-measure-wide: 62rem;
-  --bs-measure-page: 76rem;
+  --bs-measure-page: 78rem;
   --bs-gutter: clamp(1rem, 4vw, 2.5rem);
   --bs-row-h: 2rem;
-  --bs-control-h: 2.25rem;
+  --bs-control-h: 2.5rem;
   --bs-radius: 0;
   --bs-radius-control: 0;
   --bs-line-w: 1px;
-  --bs-line-w-strong: 2px;
-  --bs-duration-fast: 100ms;
-  --bs-duration-base: 180ms;
-  --bs-duration-slow: 320ms;
-  --bs-ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
-  --bs-ease-in-out: cubic-bezier(0.6, 0, 0.3, 1);
-  --bs-slide-margin: 112;
-  --bs-slide-title: 88;
-  --bs-slide-lead: 44;
+  --bs-line-w-strong: 3px;
+  --bs-duration-fast: 90ms;
+  --bs-duration-base: 160ms;
+  --bs-duration-slow: 280ms;
+  --bs-ease-out: cubic-bezier(0.3, 0.9, 0.2, 1);
+  --bs-ease-in-out: cubic-bezier(0.7, 0, 0.3, 1);
+  --bs-slide-margin: 96;
+  --bs-slide-title: 128;
+  --bs-slide-lead: 48;
   --bs-slide-body: 38;
   --bs-slide-small: 28;
   --bs-slide-foot: 24;
   --bs-video-action-safe: 0.035;
   --bs-video-title-safe: 0.05;
-  --bs-font-text: "BS IBM Plex Sans", "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
-  --bs-font-ui: "BS IBM Plex Sans", "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
-  --bs-font-display: "BS IBM Plex Sans", "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --bs-font-text: "BS Arsenal", Arsenal, "Segoe UI", system-ui, sans-serif;
+  --bs-font-ui: "BS Fixel", Fixel, "Segoe UI", system-ui, sans-serif;
+  --bs-font-display: "BS Fixel", Fixel, "Arial Black", system-ui, sans-serif;
   --bs-font-mono: "BS IBM Plex Mono", "IBM Plex Mono", ui-monospace, Consolas, monospace;
   }
 }
@@ -571,6 +624,8 @@
   /* Full colour, not opacity: dimmed text on an accent fill falls below 4.5:1. Hierarchy comes from size. */
   .bs-slide--section .bs-slide__lead, .bs-slide--section .bs-slide__foot { color: inherit; }
 
+  .bs-video--section { background: var(--bs-bg-inverse); color: var(--bs-fg-inverse); }
+  .bs-video--section .bs-titlecard__sub { color: inherit; }
   .bs-titlecard { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: calc(1920 * var(--bs-video-title-safe) * 2 * var(--px)); }
   .bs-titlecard__title { font-size: calc(96 * var(--px)); max-width: 75%; }
   .bs-titlecard__sub { margin-top: calc(24 * var(--px)); font-family: var(--bs-font-ui); font-stretch: var(--bs-ui-stretch); font-size: calc(36 * var(--px)); color: var(--bs-fg-muted); }
@@ -599,49 +654,47 @@
   .bs-board text { font-family: var(--bs-font-mono); font-size: 10px; fill: var(--bs-fg-subtle); }
 }
 
-/* sheet · signature
-   Two line weights carry all structure (thin = --bs-line-w, main = --bs-line-w-strong).
-   The metadata block is a ruled title block; slides are drawing sheets numbered n / N;
-   emphasis is a red-pencil underline. */
+/* kharkiv · signature
+   Thick black bars divide the page; titles are heavy grotesque set tight; red is the one
+   accent and appears as solid blocks (a mark, a section slide, the current item), not
+   as tints. Layouts sit off-centre against a strong left edge. */
 @layer bs.signature {
-  .bs-meta {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); gap: 0;
-    border: var(--bs-line-w-strong) solid var(--bs-fg);
-    max-width: var(--bs-measure-text);
-  }
-  .bs-meta > div {
-    display: flex; flex-direction: column; gap: var(--bs-space-1);
-    padding: var(--bs-space-2) var(--bs-space-3) var(--bs-space-3);
-    border-right: var(--bs-line-w) solid var(--bs-fg); border-bottom: var(--bs-line-w) solid var(--bs-fg);
-    margin: 0 calc(-1 * var(--bs-line-w)) calc(-1 * var(--bs-line-w)) 0;
-  }
-  .bs-meta dt { font-size: var(--bs-size-2xs); padding: 0; }
-  .bs-meta dd { font-size: var(--bs-size-sm); }
+  .bs-header { border-bottom: var(--bs-line-w-strong) solid var(--bs-fg); }
+  .bs-header__name { font-weight: var(--bs-weight-display); text-transform: uppercase; letter-spacing: 0; }
+  .bs-nav a[aria-current] { background: var(--bs-accent); color: var(--bs-on-accent); border: 0; padding-inline: var(--bs-space-2); }
 
-  .bs-mark { background: none; text-decoration: underline; text-decoration-color: var(--bs-accent); text-decoration-thickness: 0.14em; text-underline-offset: 0.12em; text-decoration-skip-ink: none; padding: 0; }
+  .bs-section-head { border-top-width: 0.5rem; }
+  .bs-section-head__title { font-family: var(--bs-font-display); font-weight: var(--bs-weight-display); text-transform: uppercase; font-size: var(--bs-size-lg); letter-spacing: 0; }
 
-  .bs-figure__num { font-weight: var(--bs-label-weight); font-stretch: var(--bs-label-stretch); text-transform: var(--bs-label-case); letter-spacing: var(--bs-tracking-label); font-size: var(--bs-size-xs); }
+  .bs-entry { border-bottom-width: var(--bs-line-w); border-bottom-color: var(--bs-fg); }
+  .bs-entry__title { font-family: var(--bs-font-display); font-weight: 800; font-size: var(--bs-size-xl); letter-spacing: var(--bs-tracking-display); }
 
-  .bs-panel { border-color: var(--bs-line-strong); }
-  .bs-panel__head { border-bottom-color: var(--bs-line-strong); }
-  .bs-panel__title { font-weight: var(--bs-label-weight); font-stretch: var(--bs-label-stretch); text-transform: var(--bs-label-case); letter-spacing: var(--bs-tracking-label); font-size: var(--bs-size-xs); }
+  /* Article titles are long: sentence case, display weight. Capitals are for short titles only
+     (section heads, slides, covers, thumbnails). */
+  .bs-article__title { font-size: var(--bs-size-3xl); }
+  .bs-meta { border-top: 0.5rem solid var(--bs-fg); padding-top: var(--bs-space-4); max-width: var(--bs-measure-text); }
+  .bs-meta dt { color: var(--bs-accent); }
 
-  /* Drawing frame: binding margin on the left, main line around the field. */
-  .bs-slide__frame {
-    inset: calc(20 * var(--px)) calc(20 * var(--px)) calc(20 * var(--px)) calc(60 * var(--px));
-    border: calc(3 * var(--px)) solid currentColor;
-    padding: calc(var(--bs-slide-margin) * 0.75 * var(--px)) calc(var(--bs-slide-margin) * 0.75 * var(--px)) 0;
-  }
-  .bs-slide__foot {
-    align-self: flex-end; gap: 0; margin-right: calc(var(--bs-slide-margin) * -0.75 * var(--px));
-    border-top: calc(3 * var(--px)) solid currentColor; border-left: calc(3 * var(--px)) solid currentColor;
-  }
-  .bs-slide__foot > * { padding: calc(10 * var(--px)) calc(22 * var(--px)); border-right: calc(1.5 * var(--px)) solid currentColor; white-space: nowrap; }
-  .bs-slide__foot > :last-child { border-right: 0; color: var(--bs-fg); font-weight: var(--bs-weight-bold); }
-  .bs-slide--section .bs-slide__foot > :last-child { color: inherit; }
+  .bs-mark { background: var(--bs-accent); color: var(--bs-on-accent); padding: 0 0.15em; }
 
-  .bs-video .bs-titlecard { border: calc(3 * var(--px)) solid currentColor; inset: calc(1920 * var(--bs-video-action-safe) * var(--px)); }
-  .bs-lowerthird { border: calc(3 * var(--px)) solid var(--bs-fg); padding: 0; display: grid; grid-template-columns: auto auto; }
-  .bs-lowerthird > * { padding: calc(14 * var(--px)) calc(26 * var(--px)); }
-  .bs-lowerthird__role { border-left: calc(1.5 * var(--px)) solid var(--bs-fg); align-self: stretch; display: flex; align-items: center; }
+  .bs-panel { border: 0; border-top: var(--bs-line-w-strong) solid var(--bs-fg); }
+  .bs-panel__head { border-bottom: 0; padding-inline: 0; }
+  .bs-panel__body { padding-inline: 0; }
+  .bs-panel__title { font-family: var(--bs-font-display); font-weight: var(--bs-weight-display); text-transform: uppercase; font-size: var(--bs-size-md); }
+
+  .bs-slide::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: calc(40 * 100cqw / 1920); background: var(--bs-accent); }
+  .bs-slide__frame { padding-left: calc((var(--bs-slide-margin) + 60) * var(--px)); }
+  .bs-slide__title { text-transform: uppercase; max-width: 92%; }
+  .bs-slide__foot { border-top: calc(6 * var(--px)) solid currentColor; padding-top: calc(14 * var(--px)); text-transform: uppercase; font-weight: var(--bs-weight-bold); }
+  .bs-slide--section { background: var(--bs-accent); color: var(--bs-on-accent); }
+  .bs-slide--section::before { background: var(--bs-fg); }
+
+  .bs-titlecard__title { text-transform: uppercase; font-size: calc(132 * var(--px)); }
+  .bs-video::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: calc(40 * 100cqw / 1920); background: var(--bs-accent); z-index: 1; }
+  .bs-video:has(> .bs-lowerthird)::before, .bs-video:has(> .sp-frame-art)::before { display: none; }
+  .bs-video--section { background: var(--bs-accent); color: var(--bs-on-accent); }
+  .bs-video--section::before { background: var(--bs-fg); }
+  .bs-lowerthird { background: var(--bs-fg); color: var(--bs-bg); border-left: calc(18 * var(--px)) solid var(--bs-accent); }
+  .bs-lowerthird__role { color: inherit; }
+  .bs-thumb__words { text-transform: uppercase; }
 }

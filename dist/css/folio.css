@@ -1,4 +1,4 @@
-/* bausk-style 0.1.0 · look "folio" (legacy) · generated, do not edit.
+/* bausk-style 0.2.0 · look "folio" (legacy) · generated, do not edit.
    Source: tokens/looks/folio/, components/base.css. Docs: guide/README.md */
 @layer bs.tokens, bs.base, bs.components, bs.signature;
 
@@ -521,6 +521,8 @@
   /* Full colour, not opacity: dimmed text on an accent fill falls below 4.5:1. Hierarchy comes from size. */
   .bs-slide--section .bs-slide__lead, .bs-slide--section .bs-slide__foot { color: inherit; }
 
+  .bs-video--section { background: var(--bs-bg-inverse); color: var(--bs-fg-inverse); }
+  .bs-video--section .bs-titlecard__sub { color: inherit; }
   .bs-titlecard { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: calc(1920 * var(--bs-video-title-safe) * 2 * var(--px)); }
   .bs-titlecard__title { font-size: calc(96 * var(--px)); max-width: 75%; }
   .bs-titlecard__sub { margin-top: calc(24 * var(--px)); font-family: var(--bs-font-ui); font-stretch: var(--bs-ui-stretch); font-size: calc(36 * var(--px)); color: var(--bs-fg-muted); }
