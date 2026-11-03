@@ -3,6 +3,24 @@
 Format: each release lists **Looks**, **Added**, **Changed**, **Fixed**, **Deprecated** and
 **Migration** (exact renames an agent can apply). Dates are absolute.
 
+## 0.2.1 — 2026-11-04
+
+Fixes found while moving the bausk.dev Ghost theme onto the system.
+
+### Fixed
+- `check`: `font-family` names inside `@font-face` are no longer reported; `color-mix()` over token
+  variables is no longer reported (literal colours inside it still are); a font variable that maps to a
+  token is accepted (literal family names are still reported).
+- `check`: `box-shadow: 0 4px …` and `border-radius: 0 12px …` were missed after 0.2.0; they are reported again.
+
+### Added
+- `init` keeps an existing hand-written DESIGN.md and writes the generated look document to
+  `design/DESIGN.md`, recorded as `designFile` in bausk-style.json; `sync`, `brief` and `check` follow it.
+- Schema: `designFile`, `$comment`.
+
+### Migration
+- None.
+
 ## 0.2.0 — 2026-11-04
 
 The brand look is chosen: `kharkiv`. Decks, PowerPoint, figures and video graphics now ship for it.

@@ -1,6 +1,6 @@
 /* Brand "bausk" → look "kharkiv". This file follows the brand's default look and changes when a release moves it.
    To freeze a project on this look, import css/kharkiv.css instead. */
-/* bausk-style 0.2.0 · Tailwind v4 theme · look "kharkiv" · generated, do not edit. */
+/* bausk-style 0.2.1 · Tailwind v4 theme · look "kharkiv" · generated, do not edit. */
 @theme inline {
   --color-*: initial;
   --color-transparent: transparent;

@@ -1,6 +1,6 @@
 {
   "name": "bausk-style",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Oleksandr Bausk's house style: versioned design tokens, looks, components, an agent guidebook and guardrail checks for web, dashboards, slides, figures, games and video.",
   "type": "module",
   "license": "MIT",

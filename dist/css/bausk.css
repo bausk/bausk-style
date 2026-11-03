@@ -1,6 +1,6 @@
 /* Brand "bausk" → look "kharkiv". This file follows the brand's default look and changes when a release moves it.
    To freeze a project on this look, import css/kharkiv.css instead. */
-/* bausk-style 0.2.0 · look "kharkiv" (candidate) · generated, do not edit.
+/* bausk-style 0.2.1 · look "kharkiv" (candidate) · generated, do not edit.
    Source: tokens/looks/kharkiv/, components/base.css. Docs: guide/README.md */
 @layer bs.tokens, bs.base, bs.components, bs.signature;
 

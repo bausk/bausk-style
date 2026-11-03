@@ -115,6 +115,7 @@ try {
   ok(!sloppy.some((f) => f.file.endsWith('app.css') && f.line === 4), 'check: bausk-style-ignore was not honoured');
   ok(!sloppy.some((f) => f.file.endsWith('app.css') && f.line === 5), 'check: box-shadow: none / border-radius: 0 were flagged');
   ok(sloppy.some((f) => f.file.endsWith('app.css') && f.line === 6 && f.rule === 'radius-from-look'), 'check: border-radius 0 12px 12px 0 was not flagged');
+  ok(sloppy.some((f) => f.file.endsWith('app.css') && f.line === 7 && f.rule === 'tokens-only'), 'check: a literal font-family was not flagged');
   const clean = check({ root: fx('clean') });
   ok(clean.length === 0, `check: clean fixture has findings: ${clean.map((f) => `${f.file}:${f.line} ${f.rule}`).join(', ')}`);
 }

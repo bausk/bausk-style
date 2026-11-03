@@ -1,4 +1,4 @@
-# bausk-style 0.2.0 · look folio · dark · slide · generated, do not edit.
+# bausk-style 0.2.1 · look folio · dark · slide · generated, do not edit.
 # plt.style.use("<path>/folio-dark-slide.mplstyle")  or  bausk_style.use("folio", "dark", "slide")
 # Fonts: bausk_style.use() registers the bundled TTFs; with plt.style.use() alone, install them (dist/fonts/ttf/) or DejaVu is used.
 font.family: sans-serif

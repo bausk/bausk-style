@@ -1,8 +1,8 @@
 {
-  "$description": "bausk-style 0.2.0 · look \"folio\" · light scheme. Values that DTCG cannot express (clamp(), %, text-transform) are left out; see dist/json/.",
+  "$description": "bausk-style 0.2.1 · look \"folio\" · light scheme. Values that DTCG cannot express (clamp(), %, text-transform) are left out; see dist/json/.",
   "$extensions": {
     "dev.bausk.style": {
-      "version": "0.2.0",
+      "version": "0.2.1",
       "look": "folio",
       "scheme": "light",
       "status": "legacy"

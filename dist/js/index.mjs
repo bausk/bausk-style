@@ -1,6 +1,6 @@
-// bausk-style 0.2.0 · generated, do not edit.
+// bausk-style 0.2.1 · generated, do not edit.
 const DATA = {
- "version": "0.2.0",
+ "version": "0.2.1",
  "brands": {
   "bausk": {
    "id": "bausk",

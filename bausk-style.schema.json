@@ -6,6 +6,9 @@
     "$schema": {
       "type": "string"
     },
+    "$comment": {
+      "type": "string"
+    },
     "version": {
       "type": "string",
       "description": "bausk-style version the project was last synced with (bausk-style sync updates it). The launcher uses it when no node_modules install exists."
@@ -78,6 +81,11 @@
           "description": "Third-party colours allowed as literals, e.g. ORCID green #a6ce39."
         }
       }
+    },
+    "designFile": {
+      "type": "string",
+      "default": "DESIGN.md",
+      "description": "Where the generated look document lives. init uses design/DESIGN.md when the project already has its own DESIGN.md."
     }
   },
   "additionalProperties": false
